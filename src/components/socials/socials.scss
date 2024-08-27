@@ -1,0 +1,25 @@
+@import '../../style/main.scss';
+
+.socials {
+  @include flex(row, flex-start);
+  gap: 20px;
+  padding: 30px 0px 30px 0px;
+}
+.socials_icon > :first-child {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--text);
+  border-radius: 50%;
+  padding: 15px;
+  transition: all 0.4s;
+  @media (max-width: 575.98px) {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+  }
+}
+
+.socials_icon > :first-child:hover {
+  color: var(--secondary);
+  background-color: white;
+}
