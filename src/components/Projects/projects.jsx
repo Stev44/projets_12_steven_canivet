@@ -8,7 +8,7 @@ const Projects = () => {
         <h2 className="underline">MY PROJECTS</h2>
         <div className="wrapper">
           {content.map((item, index) => (
-            <div className="map block" key={index}>
+            <div className="map" key={index}>
               <h3>{item.title}</h3>
               <div className="card">
                 <div className="card_img">
