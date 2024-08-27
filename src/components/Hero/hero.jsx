@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
         </div>
         <button className="button" onClick={() => scrollToSection('projects')}>
-          <span class="sr-only">Nav button</span>
+          <span className="sr-only">Nav button</span>
           <Arrow className="button_arrow" />
         </button>
       </div>

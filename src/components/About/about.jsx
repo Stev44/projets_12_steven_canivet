@@ -11,25 +11,25 @@ const About = () => {
       <div className="about_content">
         <div className="about_wrapper">
           <div className="about_wrapper_qualities">
-            <div className="quality">
+            <div className="quality block">
               <div>
                 <Book className="quality_icon" />
               </div>
               <p className="quality_text">Curiosity</p>
             </div>
-            <div className="quality">
+            <div className="quality block">
               <div>
                 <Hand className="quality_icon" />
               </div>
               <p className="quality_text">Team spirit</p>
             </div>
-            <div className="quality">
+            <div className="quality block">
               <div>
                 <Gear className="quality_icon" />
               </div>
               <p className="quality_text">Adaptation</p>
             </div>
-            <div className="quality">
+            <div className="quality block">
               <div>
                 <Pro className="quality_icon" />
               </div>

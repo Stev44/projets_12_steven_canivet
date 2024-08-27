@@ -7,7 +7,7 @@ const Socials = () => {
       {socialMedia.map((item, index) => (
         <a key={index} href={item.link}>
           <span className="socials_icon">{item.icon}</span>
-          <span class="sr-only">Social button</span>
+          <span className="sr-only">Social button</span>
         </a>
       ))}
     </div>

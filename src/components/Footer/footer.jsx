@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="footer">
         {socialMedia.map((item, index) => (
           <a key={index} href={item.link}>
-            <span class="sr-only">Social button</span>
+            <span className="sr-only">Social button</span>
             <span className="footer_icon">{item.icon}</span>
           </a>
         ))}

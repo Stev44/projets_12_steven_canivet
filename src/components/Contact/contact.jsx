@@ -82,7 +82,7 @@ const Contact = () => {
           <div className="wrapper">
             <div className="wrapper_container">
               <div className="wrapper_container_inputs">
-                <label className="sr-only" for="name">
+                <label className="sr-only" htmlFor="name">
                   Name
                 </label>
                 <input
@@ -97,7 +97,7 @@ const Contact = () => {
                 />
               </div>
               <div className="wrapper_container_inputs">
-                <label className="sr-only" for="firstName">
+                <label className="sr-only" htmlFor="firstName">
                   Firstname
                 </label>
                 <input
@@ -112,7 +112,7 @@ const Contact = () => {
                 />
               </div>
               <div className="wrapper_container_inputs">
-                <label className="sr-only" for="subject">
+                <label className="sr-only" htmlFor="subject">
                   Subject
                 </label>
                 <input
@@ -127,7 +127,7 @@ const Contact = () => {
                 />
               </div>
               <div className="wrapper_container_inputs">
-                <label className="sr-only" for="email">
+                <label className="sr-only" htmlFor="email">
                   Email
                 </label>
                 <input
@@ -143,7 +143,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="wrapper_message">
-              <label className="sr-only" for="message">
+              <label className="sr-only" htmlFor="message">
                 Message
               </label>
               <textarea
@@ -157,7 +157,7 @@ const Contact = () => {
             </div>
           </div>
           <button className="button" type="submit">
-            <span class="sr-only">Contact button</span>
+            <span className="sr-only">Contact button</span>
             <FontAwesomeIcon icon={faPaperPlane} className="button_icon" />
           </button>
         </form>

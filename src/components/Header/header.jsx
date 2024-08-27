@@ -60,7 +60,7 @@ const Header = React.memo(() => {
           <Link onClick={() => scrollToSection('course')}>Course</Link>
           <Link onClick={() => scrollToSection('contact')}>Contact</Link>
           <button className="nav_links_button" onClick={handleClick}>
-            <span class="sr-only">Paint button</span>
+            <span className="sr-only">Paint button</span>
             <Paint className="paint" />
           </button>
         </div>
@@ -68,7 +68,7 @@ const Header = React.memo(() => {
           onClick={() => scrollToSection('header')}
           className={`back ${visible ? 'visible' : ''}`}
         >
-          <span class="sr-only">Nav button</span>
+          <span className="sr-only">Nav button</span>
           <ArrowUp className="arrow" />
         </button>
       </nav>
