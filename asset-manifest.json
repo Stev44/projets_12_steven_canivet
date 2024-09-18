@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/projets_12_steven_canivet/static/css/main.f0cfe1e5.css",
-    "main.js": "/projets_12_steven_canivet/static/js/main.664e664c.js",
+    "main.css": "/projets_12_steven_canivet/static/css/main.ccb7b64e.css",
+    "main.js": "/projets_12_steven_canivet/static/js/main.24bb1086.js",
     "static/media/nina2.jpg": "/projets_12_steven_canivet/static/media/nina2.a7d4711be7f037af863b.jpg",
-    "static/media/sophie0.png": "/projets_12_steven_canivet/static/media/sophie0.ddaf4034d7266253fac1.png",
     "static/media/724.png": "/projets_12_steven_canivet/static/media/724.500f5e9e4311d8d5e13d.png",
     "static/media/kasa2.jpg": "/projets_12_steven_canivet/static/media/kasa2.4855a011e02803dca4ab.jpg",
     "static/media/argentbank2.jpeg": "/projets_12_steven_canivet/static/media/argentbank2.4d59987c7c62b024b014.jpeg",
     "static/media/portfolio.jpg": "/projets_12_steven_canivet/static/media/portfolio.eb3338e9030d4f4e91a4.jpg",
     "static/media/profil.jpg": "/projets_12_steven_canivet/static/media/profil.234f66ef62abbcf973df.jpg",
+    "static/media/planche.webp": "/projets_12_steven_canivet/static/media/planche.db18f1b948d7df6e7360.webp",
     "static/media/gear.svg": "/projets_12_steven_canivet/static/media/gear.5ee6cfcf736932d7b7af04946aae3f2d.svg",
     "static/media/sass.svg": "/projets_12_steven_canivet/static/media/sass.903cef0c9879296f452e2bd0364f58e9.svg",
     "static/media/hand.svg": "/projets_12_steven_canivet/static/media/hand.3066add383edaeb1f1132e884f676840.svg",
@@ -30,11 +30,11 @@
     "static/media/ts.svg": "/projets_12_steven_canivet/static/media/ts.63552c04719a255c52d8cc57e2cd31b0.svg",
     "static/media/css.svg": "/projets_12_steven_canivet/static/media/css.60e23942f41d4dc73de0d271b4453605.svg",
     "static/media/html.svg": "/projets_12_steven_canivet/static/media/html.c1bb84e022ca9d76984d4b943bd678fd.svg",
-    "main.f0cfe1e5.css.map": "/projets_12_steven_canivet/static/css/main.f0cfe1e5.css.map",
-    "main.664e664c.js.map": "/projets_12_steven_canivet/static/js/main.664e664c.js.map"
+    "main.ccb7b64e.css.map": "/projets_12_steven_canivet/static/css/main.ccb7b64e.css.map",
+    "main.24bb1086.js.map": "/projets_12_steven_canivet/static/js/main.24bb1086.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0cfe1e5.css",
-    "static/js/main.664e664c.js"
+    "static/css/main.ccb7b64e.css",
+    "static/js/main.24bb1086.js"
   ]
 }
