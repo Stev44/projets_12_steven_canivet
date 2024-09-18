@@ -1,7 +1,5 @@
 import './footer.scss'
-import { Link } from 'react-router-dom'
 import { socialMedia } from '../../features/features'
-import { scrollToSection } from '../../features/function'
 
 const Footer = () => {
   return (
@@ -15,7 +13,7 @@ const Footer = () => {
         ))}
       </div>
 
-      <p>© Steven Canivet | All Rights Reserved</p>
+      <p>© Steven Canivet | Tous droits réservés</p>
     </footer>
   )
 }

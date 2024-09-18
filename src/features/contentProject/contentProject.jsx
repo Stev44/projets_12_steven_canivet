@@ -24,8 +24,8 @@ const content = [
   {
     title: 'Portfolio',
     img: portfolio,
-    description: `Projet de fin d'étude réalisé "from scratch", en react et react redux.`,
-    technologies: [ReactIcon, Redux, Sass, Figma],
+    description: `Projet de fin d'étude réalisé "from scratch", en react.`,
+    technologies: [ReactIcon, Sass, Figma],
     link: 'https://github.com/Stev44/projet_12_steven_canivet',
   },
   {

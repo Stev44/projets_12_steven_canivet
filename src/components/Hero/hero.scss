@@ -2,11 +2,14 @@
 
 .hero {
   @include flex;
-  height: 90vh;
+  min-height: 90vh;
+  height: auto;
   position: relative;
   @media (max-width: 575.98px) {
-    padding: 0 20px 0 20px;
-    height: 88vh;
+    min-height: 88vh;
+  }
+  @media (max-height: 700px) {
+    padding: 20px 0 20px 0;
   }
   &_wrapper {
     @include flex(column);
@@ -21,6 +24,7 @@
       @media (min-width: 0px) and (max-width: 1000px) {
         @include flex(column-reverse, space-evenly);
         height: 100%;
+        gap: 20px;
       }
       .wrapper {
         width: 60%;
@@ -71,7 +75,7 @@
           border: 2px solid var(--primary);
           background-color: var(--primary);
           padding: 20px;
-          border-radius: 25px;
+          border-radius: 15px;
           transition: 0.4s;
           @media (max-width: 575.98px) {
             width: 60%;
@@ -92,8 +96,8 @@
           border-radius: 50%;
           object-fit: cover;
           @media (max-width: 575.98px) {
-            width: 275px;
-            height: 275px;
+            width: 225px;
+            height: 225px;
           }
           @media (min-width: 1440px) and (max-width: 1660px) {
             width: 450px;

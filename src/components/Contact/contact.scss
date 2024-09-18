@@ -1,141 +1,164 @@
 @import '../../style/main.scss';
 
-.contact {
+.contactSection {
   @include flex(column, flex-start);
-  gap: 100px;
-  height: 100vh;
+  height: auto;
   width: 100%;
   @media (min-width: 0px) and (max-width: 850px) {
     height: auto;
   }
-  &_group {
+  .contact {
     @include flex(column);
-    height: 100%;
-    width: 100%;
-    gap: 50px;
-    &_infos {
-      @include flex(row-reverse, space-between);
-      width: 50%;
-      @media (min-width: 0px) and (max-width: 550px) {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-      @media (min-width: 1440px) and (max-width: 1660px) {
-        width: 60%;
-      }
-      @media (min-width: 1250px) and (max-width: 1439px) {
-        width: 70%;
-      }
-      @media (min-width: 850px) and (max-width: 1249px) {
-        width: 80%;
-      }
-      @media (min-width: 550px) and (max-width: 850px) {
-        width: 100%;
-      }
-      &_text {
-        @include flex;
-        gap: 10px;
-        &_icon {
-          width: 24px;
-          height: 24px;
-          fill: var(--accent);
-        }
-      }
-    }
-    .form {
+    gap: 100px;
+    &_group {
       @include flex(column);
+      height: 100%;
+      width: 100%;
       gap: 50px;
-      width: 50%;
-      @media (min-width: 0px) and (max-width: 850px) {
-        width: 100%;
-      }
-      @media (min-width: 1440px) and (max-width: 1660px) {
-        width: 60%;
-      }
-      @media (min-width: 1250px) and (max-width: 1439px) {
-        width: 70%;
-      }
-      @media (min-width: 850px) and (max-width: 1249px) {
-        width: 80%;
-      }
-      .wrapper {
-        @include flex(row);
-        gap: 15px;
-        width: 100%;
-        height: 300px;
-        @media (min-width: 0px) and (max-width: 850px) {
-          flex-direction: column;
-          height: 500px;
+      &_infos {
+        @include flex(row, space-between);
+        position: relative;
+        width: 50%;
+        @media (min-width: 0px) and (max-width: 550px) {
+          width: 100%;
+          gap: 10px;
         }
-        &_container {
+        @media (min-width: 1440px) and (max-width: 1660px) {
+          width: 60%;
+        }
+        @media (min-width: 1250px) and (max-width: 1439px) {
+          width: 70%;
+        }
+        @media (min-width: 850px) and (max-width: 1249px) {
+          width: 80%;
+        }
+        @media (min-width: 550px) and (max-width: 850px) {
+          width: 100%;
+        }
+        &_element {
           @include flex(column);
-          width: 50%;
-          height: 100%;
+          gap: 30px;
+          .contact_icon {
+            width: 56px;
+            height: 56px;
+            fill: var(--secondary);
+            stroke: var(--secondary);
+          }
+          h3 {
+            font-size: 24px;
+            @media (min-width: 0px) and (max-width: 550px) {
+              font-size: 16px;
+            }
+          }
+          p {
+            color: var(--secondary);
+            @media (min-width: 0px) and (max-width: 550px) {
+              font-size: 12px;
+            }
+          }
+        }
+        &_separate {
+          position: absolute;
+          left: 50%;
+          top: 0;
+          height: 90%;
+          width: 0px;
+          border: 1px solid var(--text);
+        }
+      }
+      .form {
+        @include flex(column);
+        gap: 50px;
+        width: 50%;
+        @media (min-width: 0px) and (max-width: 850px) {
+          width: 100%;
+        }
+        @media (min-width: 1440px) and (max-width: 1660px) {
+          width: 60%;
+        }
+        @media (min-width: 1250px) and (max-width: 1439px) {
+          width: 70%;
+        }
+        @media (min-width: 850px) and (max-width: 1249px) {
+          width: 80%;
+        }
+        .wrapper {
+          @include flex(row);
           gap: 15px;
+          width: 100%;
+          height: 300px;
           @media (min-width: 0px) and (max-width: 850px) {
-            width: 100%;
+            flex-direction: column;
+            height: 500px;
           }
-          @media (min-width: 1440px) and (max-width: 1660px) {
-            width: 60%;
-          }
-          @media (min-width: 1250px) and (max-width: 1439px) {
-            width: 70%;
-          }
-          @media (min-width: 850px) and (max-width: 1249px) {
-            width: 80%;
-          }
-          &_inputs {
-            width: 100%;
+          &_container {
+            @include flex(column);
+            width: 50%;
             height: 100%;
-            .input {
+            gap: 15px;
+            @media (min-width: 0px) and (max-width: 850px) {
+              width: 100%;
+            }
+            @media (min-width: 1440px) and (max-width: 1660px) {
+              width: 60%;
+            }
+            @media (min-width: 1250px) and (max-width: 1439px) {
+              width: 70%;
+            }
+            @media (min-width: 850px) and (max-width: 1249px) {
+              width: 80%;
+            }
+            &_inputs {
               width: 100%;
               height: 100%;
+              .input {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                padding: 0 15px 0 15px;
+                border: 1px solid var(--text);
+                background-color: var(--text);
+              }
+            }
+          }
+          &_message {
+            width: 50%;
+            height: 100%;
+            @media (min-width: 0px) and (max-width: 850px) {
+              width: 100%;
+            }
+            @media (min-width: 1440px) and (max-width: 1660px) {
+              width: 60%;
+            }
+            @media (min-width: 1250px) and (max-width: 1439px) {
+              width: 70%;
+            }
+            @media (min-width: 850px) and (max-width: 1249px) {
+              width: 80%;
+            }
+            .textarea {
+              height: 100%;
+              width: 100%;
               border-radius: 10px;
-              padding: 0 15px 0 15px;
+              padding: 10px;
               border: 1px solid var(--text);
               background-color: var(--text);
             }
           }
         }
-        &_message {
-          width: 50%;
-          height: 100%;
-          @media (min-width: 0px) and (max-width: 850px) {
-            width: 100%;
+        .button {
+          height: 60px;
+          width: 200px;
+          border-radius: 15px;
+          border: none;
+          background-color: var(--primary);
+          &_icon {
+            font-size: 32px;
+            color: var(--background);
           }
-          @media (min-width: 1440px) and (max-width: 1660px) {
-            width: 60%;
+          &:hover .button_icon {
+            color: white;
           }
-          @media (min-width: 1250px) and (max-width: 1439px) {
-            width: 70%;
-          }
-          @media (min-width: 850px) and (max-width: 1249px) {
-            width: 80%;
-          }
-          .textarea {
-            height: 100%;
-            width: 100%;
-            border-radius: 10px;
-            padding: 10px;
-            border: 1px solid var(--text);
-            background-color: var(--text);
-          }
-        }
-      }
-      .button {
-        height: 70px;
-        width: 300px;
-        border-radius: 25px;
-        border: none;
-        background-color: var(--primary);
-        &_icon {
-          font-size: 32px;
-          color: var(--background);
-        }
-        &:hover .button_icon {
-          color: white;
         }
       }
     }
@@ -144,4 +167,39 @@
 
 .tam {
   color: white;
+}
+
+.thanks {
+  padding: 0 0 150px 0;
+  &_wrapper {
+    @include flex(column);
+    text-align: center;
+    gap: 20px;
+    margin: 0 auto;
+    &_title {
+      background: linear-gradient(120deg, var(--primary), var(--accent));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &_text {
+      a {
+        color: var(--accent);
+        font-weight: 700;
+      }
+    }
+    &_button {
+      width: 300px;
+      height: 70px;
+      margin-top: 50px;
+      background-color: var(--primary);
+      border: none;
+      border-radius: 25px;
+      &_icon {
+        stroke: var(--background);
+        height: 48px;
+        width: 48px;
+      }
+    }
+  }
 }

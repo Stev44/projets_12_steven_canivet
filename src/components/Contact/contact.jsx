@@ -65,104 +65,121 @@ const Contact = () => {
   }
 
   return (
-    <section className="contact padding" id="contact">
-      <h2 className="underline">CONTACT ME</h2>
-      <div className="contact_group margin">
-        <div className="contact_group_infos">
-          <div className="contact_group_infos_text">
-            <Email className="contact_group_infos_text_icon" />
-            <p>: steven.pro@gmail.com</p>
+    <section className="contactSection padding" id="contact">
+      <div className="contact margin">
+        <h2 className="underline">CONTACTEZ MOI</h2>
+        <div className="contact_group margin">
+          <div className="contact_group_infos">
+            <div className="contact_group_infos_element">
+              <Phone className="contact_icon" />
+              <h3>PAR TÉLÉPHONE</h3>
+              <p>06 47 01 30 99</p>
+            </div>
+            <div className="contact_group_infos_separate"></div>
+            <div className="contact_group_infos_element">
+              <Email className="contact_icon" />
+              <h3>PAR MAIL</h3>
+              <p>steven.canivet@gmail.com</p>
+            </div>
           </div>
-          <div className="contact_group_infos_text">
-            <Phone className="contact_group_infos_text_icon" />
-            <p>: +33 06 47 01 30 99</p>
+          <form className="form" onSubmit={handleSubmit}>
+            <div className="wrapper">
+              <div className="wrapper_container">
+                <div className="wrapper_container_inputs">
+                  <label className="sr-only" htmlFor="lastName">
+                    Name
+                  </label>
+                  <input
+                    className="input"
+                    type="text"
+                    name="lastName"
+                    id="lastName"
+                    placeholder="Nom"
+                    value={formState.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="wrapper_container_inputs">
+                  <label className="sr-only" htmlFor="firstName">
+                    Firstname
+                  </label>
+                  <input
+                    className="input"
+                    type="text"
+                    name="firstName"
+                    id="firstName"
+                    placeholder="Prénom"
+                    value={formState.firstName}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="wrapper_container_inputs">
+                  <label className="sr-only" htmlFor="subject">
+                    Subject
+                  </label>
+                  <input
+                    className="input"
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    placeholder="Objet"
+                    value={formState.subject}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="wrapper_container_inputs">
+                  <label className="sr-only" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    className="input"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                    value={formState.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="wrapper_message">
+                <label className="sr-only" htmlFor="message">
+                  Message
+                </label>
+                <textarea
+                  className="textarea"
+                  name="message"
+                  id="message"
+                  value={formState.message}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <button className="button" type="submit">
+              <span className="sr-only">Contact button</span>
+              <FontAwesomeIcon icon={faPaperPlane} className="button_icon" />
+            </button>
+          </form>
+          <div>
+            <p>{confirmVisible && confirm}</p>
           </div>
         </div>
-        <form className="form" onSubmit={handleSubmit}>
-          <div className="wrapper">
-            <div className="wrapper_container">
-              <div className="wrapper_container_inputs">
-                <label className="sr-only" htmlFor="name">
-                  Name
-                </label>
-                <input
-                  className="input"
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Name"
-                  value={formState.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="wrapper_container_inputs">
-                <label className="sr-only" htmlFor="firstName">
-                  Firstname
-                </label>
-                <input
-                  className="input"
-                  type="text"
-                  name="firstName"
-                  id="firstName"
-                  placeholder="Firstname"
-                  value={formState.firstName}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="wrapper_container_inputs">
-                <label className="sr-only" htmlFor="subject">
-                  Subject
-                </label>
-                <input
-                  className="input"
-                  type="text"
-                  name="subject"
-                  id="subject"
-                  placeholder="Subject"
-                  value={formState.subject}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="wrapper_container_inputs">
-                <label className="sr-only" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  className="input"
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                  value={formState.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            </div>
-            <div className="wrapper_message">
-              <label className="sr-only" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                className="textarea"
-                name="message"
-                id="message"
-                value={formState.message}
-                onChange={handleChange}
-                required
-              />
-            </div>
-          </div>
-          <button className="button" type="submit">
-            <span className="sr-only">Contact button</span>
-            <FontAwesomeIcon icon={faPaperPlane} className="button_icon" />
-          </button>
-        </form>
-        <div>
-          <p>{confirmVisible && confirm}</p>
+        <div className="thanks_wrapper margin">
+          <h3 className="thanks_wrapper_title">MERCI POUR VOTRE ATTENTION</h3>
+          <p className="thanks_wrapper_text">
+            Téléchargez mon{' '}
+            {
+              <a href="/omf.jpg" download="omf.jpg">
+                CV
+              </a>
+            }{' '}
+            si vous souhaitez plus d'informations
+          </p>
         </div>
       </div>
     </section>

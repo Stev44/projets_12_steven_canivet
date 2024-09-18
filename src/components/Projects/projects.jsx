@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <section className="projects padding" id="projects">
       <div className="projects_wrapper margin">
-        <h2 className="underline">MY PROJECTS</h2>
+        <h2 className="underline">MES PROJETS</h2>
         <div className="wrapper">
           {content.map((item, index) => (
             <div className="map" key={index}>

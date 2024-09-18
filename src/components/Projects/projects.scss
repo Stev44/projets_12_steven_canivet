@@ -2,7 +2,8 @@
 
 .projects {
   background-color: var(--tertiary);
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   @media (max-width: 1550px) {
     height: auto;
   }
@@ -12,6 +13,7 @@
     width: 100%;
     margin: 0 auto;
     .wrapper {
+      width: 100%;
       display: grid;
       grid-template-columns: repeat(
         auto-fit,
