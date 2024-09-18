@@ -15,13 +15,13 @@ const About = () => {
               <div>
                 <Book className="quality_icon" />
               </div>
-              <p className="quality_text">Curiosity</p>
+              <p className="quality_text">Curiosité</p>
             </div>
             <div className="quality block">
               <div>
                 <Hand className="quality_icon" />
               </div>
-              <p className="quality_text">Team spirit</p>
+              <p className="quality_text">Esprit d'équipe</p>
             </div>
             <div className="quality block">
               <div>
@@ -33,30 +33,31 @@ const About = () => {
               <div>
                 <Pro className="quality_icon" />
               </div>
-              <p className="quality_text">Professionnal</p>
+              <p className="quality_text">Professionnel</p>
             </div>
           </div>
           <div className="about_wrapper_text">
             <p>
-              Je suis Steven Canivet, développeur, designer & music producer
-              situé en France.
+              Je m'appelle Steven Canivet, développeur front-end basé en France.
             </p>
             <p>
-              Ayant un parcours atypique, j’ai travaillé ces domaines de façon
-              autodidacte pendant plusieurs années développant un amour
-              particulier pour le développement, notamment pour la sécurité
-              informatique et l’intelligence artificielle.
+              Mon parcours est atypique et témoigne de ma polyvalence. Après un
+              BTS en commerce international et une licence en communication et
+              marketing, j’ai occupé pendant un an le poste de brancardier à
+              l’Hôpital Privé du Confluent, poussé par mon intérêt pour l’aide à
+              la personne.
             </p>
             <p>
-              Je suis également designer, ce qui me permet d’associer l’une de
-              mes passions à mon travail actuel de développeur web &
-              d’application fullstack et créer des interfaces sobres, épurées et
-              modernes.
+              Animé par une passion pour la création, j’ai décidé de me
+              reconvertir dans le développement web. J'ai suivi une formation de
+              9 mois chez <strong>OpenClassrooms</strong>, sous la supervision
+              d’un mentor expérimenté.
             </p>
             <p>
-              En parallèle, je suis producteur de musique (dit “music producer”)
-              étant tout particulièrement attiré professionnellement par le
-              monde musical du jeu vidéo.
+              Parallèlement, ma créativité me pousse à consacrer mon temps libre
+              au développement de jeux et d’interactions pour des sites web, ce
+              qui nourrit et renforce ma passion pour le métier de développeur
+              web.
             </p>
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 .about {
   @include flex(column, flex-start);
+  position: relative;
   margin: 0 200px 0 200px;
   height: 100vh;
   gap: 100px;
@@ -91,4 +92,13 @@
       gap: 20px;
     }
   }
+}
+
+.canva {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: -15px;
+  right: -200px;
+  fill: white;
 }

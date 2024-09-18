@@ -6,12 +6,6 @@ import { scrollToSection } from '../../features/function'
 const Footer = () => {
   return (
     <footer>
-      <div className="footer_links">
-        <Link onClick={() => scrollToSection('projects')}>Projects</Link>
-        <Link onClick={() => scrollToSection('about')}>About</Link>
-        <Link onClick={() => scrollToSection('course')}>Course</Link>
-        <Link onClick={() => scrollToSection('contact')}>Contact</Link>
-      </div>
       <div className="footer">
         {socialMedia.map((item, index) => (
           <a key={index} href={item.link}>

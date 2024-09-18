@@ -57,7 +57,7 @@ const Header = React.memo(() => {
         <div className="nav_links">
           <Link onClick={() => scrollToSection('projects')}>Projects</Link>
           <Link onClick={() => scrollToSection('about')}>About</Link>
-          <Link onClick={() => scrollToSection('course')}>Course</Link>
+          <Link onClick={() => scrollToSection('course')}>Skills</Link>
           <Link onClick={() => scrollToSection('contact')}>Contact</Link>
           <button className="nav_links_button" onClick={handleClick}>
             <span className="sr-only">Paint button</span>
