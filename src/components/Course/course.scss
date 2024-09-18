@@ -9,6 +9,9 @@
     gap: 100px;
     margin: 0 auto;
     height: 100%;
+    @media (max-width: 575.98px) {
+      gap: 50px;
+    }
     .wrapper {
       @include flex;
       width: 100%;

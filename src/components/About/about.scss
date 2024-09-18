@@ -8,6 +8,9 @@
     gap: 100px;
     @include flex(column);
     position: relative;
+    @media (max-width: 575.98px) {
+      gap: 50px;
+    }
     &_content {
       @include flex;
       position: relative;
@@ -91,6 +94,9 @@
         line-height: 1.7;
         @include flex(column, center, flex-start);
         gap: 20px;
+        strong {
+          color: var(--accent);
+        }
       }
     }
   }

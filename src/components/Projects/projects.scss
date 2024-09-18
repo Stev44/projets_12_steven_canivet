@@ -12,6 +12,9 @@
     gap: 100px;
     width: 100%;
     margin: 0 auto;
+    @media (max-width: 575.98px) {
+      gap: 50px;
+    }
     .wrapper {
       width: 100%;
       display: grid;

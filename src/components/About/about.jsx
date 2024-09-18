@@ -39,8 +39,8 @@ const About = () => {
             </div>
             <div className="about_wrapper_text">
               <p>
-                Je m'appelle Steven Canivet et je suis développeur front-end
-                basé à Nantes.
+                Je m'appelle Steven Canivet et je suis développeur{' '}
+                <strong>front-end</strong> basé à Nantes.
               </p>
               <p>
                 Mon parcours est atypique et témoigne de ma polyvalence. Après

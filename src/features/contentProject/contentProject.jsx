@@ -8,7 +8,7 @@ import { ReactComponent as Css } from '../../assets/css.svg'
 
 import project from '../../assets/724.png'
 import test from '../../assets/argentbank2.jpeg'
-import portfolio from '../../assets/portfolio.jpg'
+import portfolio from '../../assets/portfolio.webp'
 import land from '../../assets/kasa2.jpg'
 import prog from '../../assets/planche.webp'
 import landing from '../../assets/nina2.jpg'
