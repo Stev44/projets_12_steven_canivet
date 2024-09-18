@@ -25,6 +25,7 @@
         }
         @media (max-width: 750px) {
           grid-template-columns: repeat(2, 1fr);
+          row-gap: 30px;
         }
         &_container {
           @include flex(column);
@@ -34,9 +35,17 @@
           height: 200px;
           border-radius: 15px;
           border: 1px solid hsl(214, 68%, 31%, 20%);
+          @media (max-width: 578.98px) {
+            width: 150px;
+            height: 150px;
+          }
           &_icon {
             width: 56px;
             height: 56px;
+            @media (max-width: 575.98px) {
+              width: 48px;
+              height: 48px;
+            }
           }
         }
       }

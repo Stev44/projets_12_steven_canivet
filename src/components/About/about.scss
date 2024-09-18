@@ -63,8 +63,11 @@
           }
           &_text {
             font-size: 0.75rem;
-            @media (max-width: 575.98px) {
+            @media (min-width: 480px) and (max-width: 575.98px) {
               font-size: 0.58rem;
+            }
+            @media (min-width: 0px) and (max-width: 480px) {
+              font-size: 0.48rem;
             }
           }
           &_icon {
