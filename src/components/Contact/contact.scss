@@ -25,7 +25,7 @@
         background-color: var(--tertiary);
         border-radius: 10px;
         border: 2px solid var(--tertiary);
-        padding: 20px 10px 20px 10px;
+        padding: 20px;
         @media (min-width: 0px) and (max-width: 550px) {
           width: 100%;
           gap: 10px;
@@ -41,6 +41,9 @@
         }
         @media (min-width: 550px) and (max-width: 850px) {
           width: 100%;
+        }
+        @media (max-width: 575px) {
+          padding: 20px 10px 20px 10px;
         }
         &_element {
           @include flex(column);
