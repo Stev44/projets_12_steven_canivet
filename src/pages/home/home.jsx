@@ -3,9 +3,8 @@ import Projects from '../../components/Projects/projects'
 import About from '../../components/About/about'
 import Course from '../../components/Course/course'
 import Contact from '../../components/Contact/contact'
-import Thanks from '../../components/Thanks/thanks'
 import './home.scss'
-import content from '../../features/contentProject/contentProject'
+import content from '../../features/contentProject'
 
 const OPTIONS = { loop: true }
 

@@ -1,5 +1,5 @@
 import './projects.scss'
-import content from '../../features/contentProject/contentProject'
+import content from '../../features/contentProject'
 
 const Projects = () => {
   return (
@@ -25,20 +25,32 @@ const Projects = () => {
                       <p>{item.description}</p>
                     </div>
                     <div className="card_img_button">
-                      <button>
-                        <p>
-                          <a href={item.link} target="_blank" rel="noreferrer">
-                            Voir le code
-                          </a>
-                        </p>
-                      </button>
-                      <button>
-                        <p>
-                          <a href={item.link} target="_blank" rel="noreferrer">
-                            Voir le site
-                          </a>
-                        </p>
-                      </button>
+                      {item.code && (
+                        <button>
+                          <p>
+                            <a
+                              href={item.code}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              Voir le code
+                            </a>
+                          </p>
+                        </button>
+                      )}
+                      {item.site && (
+                        <button>
+                          <p>
+                            <a
+                              href={item.site}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              Voir le site
+                            </a>
+                          </p>
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>

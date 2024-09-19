@@ -35,10 +35,30 @@ const Header = React.memo(() => {
           </h1>
         </Link>
         <div className="nav_links">
-          <Link onClick={() => scrollToSection('projects')}>Projets</Link>
-          <Link onClick={() => scrollToSection('about')}>À propos</Link>
-          <Link onClick={() => scrollToSection('course')}>Compétences</Link>
-          <Link onClick={() => scrollToSection('contact')}>Contact</Link>
+          <Link
+            onClick={() => scrollToSection('projects')}
+            className="nav_links_section"
+          >
+            Projets
+          </Link>
+          <Link
+            onClick={() => scrollToSection('about')}
+            className="nav_links_section"
+          >
+            À propos
+          </Link>
+          <Link
+            onClick={() => scrollToSection('course')}
+            className="nav_links_section"
+          >
+            Compétences
+          </Link>
+          <Link
+            onClick={() => scrollToSection('contact')}
+            className="nav_links_contact"
+          >
+            Contact
+          </Link>
         </div>
         <button
           onClick={() => scrollToSection('header')}

@@ -5,7 +5,6 @@ import {
   faGithub,
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons'
-import './features.scss'
 
 export const socialMedia = [
   {

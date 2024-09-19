@@ -71,9 +71,9 @@
           }
         }
         &_button {
-          width: 275px;
-          border: 2px solid var(--primary);
-          background-color: var(--primary);
+          width: 250px;
+          border: 2px solid var(--accent);
+          background-color: var(--accent);
           padding: 20px;
           border-radius: 15px;
           transition: 0.4s;
@@ -83,9 +83,9 @@
             font-size: 1rem;
           }
           &:hover {
-            background: var(--primary);
-            color: black;
-            border: 2px solid var(--primary);
+            color: var(--text);
+            box-shadow: 0 3px 15px rgba(62, 139, 239, 0.3);
+            transform: scale(0.9);
           }
         }
       }
@@ -120,9 +120,17 @@
       height: 70px;
       bottom: 60px;
       position: absolute;
-      border: 1px solid var(--text);
+      border: 2px solid var(--text);
       background-color: transparent;
       border-radius: 50%;
+      transition: 0.4s;
+      &:hover {
+        transform: scale(0.9);
+        background-color: var(--text);
+        .button_arrow {
+          fill: var(--accent);
+        }
+      }
       &_arrow {
         fill: var(--text);
         width: 32px;

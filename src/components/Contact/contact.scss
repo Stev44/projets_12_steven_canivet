@@ -10,6 +10,9 @@
   .contact {
     @include flex(column);
     gap: 100px;
+    @media (min-width: 0px) and (max-width: 575px) {
+      gap: 50px;
+    }
     &_group {
       @include flex(column);
       height: 100%;
@@ -19,6 +22,10 @@
         @include flex(row, space-between);
         position: relative;
         width: 50%;
+        background-color: var(--tertiary);
+        border-radius: 10px;
+        border: 2px solid var(--tertiary);
+        padding: 20px 10px 20px 10px;
         @media (min-width: 0px) and (max-width: 550px) {
           width: 100%;
           gap: 10px;
@@ -41,8 +48,8 @@
           .contact_icon {
             width: 48px;
             height: 48px;
-            fill: var(--secondary);
-            stroke: var(--secondary);
+            fill: var(--accent);
+            stroke: var(--accent);
             @media (max-width: 575.98px) {
               width: 32px;
               height: 32px;
@@ -51,20 +58,21 @@
           h3 {
             font-size: 24px;
             @media (min-width: 0px) and (max-width: 550px) {
-              font-size: 16px;
+              font-size: 14px;
             }
           }
           p {
-            color: var(--secondary);
+            color: var(--accent);
             @media (min-width: 0px) and (max-width: 550px) {
-              font-size: 12px;
+              font-size: 10px;
             }
           }
         }
         &_separate {
           position: absolute;
           left: 50%;
-          top: 0;
+          top: 10;
+          bottom: 10;
           height: 90%;
           width: 0px;
           border: 1px solid var(--text);
@@ -155,13 +163,19 @@
           width: 200px;
           border-radius: 15px;
           border: none;
-          background-color: var(--primary);
+          background-color: var(--accent);
+          transition: 0.4s;
           &_icon {
             font-size: 32px;
             color: var(--background);
+            transition: 0.4s;
           }
-          &:hover .button_icon {
-            color: white;
+          &:hover {
+            transform: scale(0.9);
+            box-shadow: 0 3px 15px rgba(62, 139, 239, 0.3);
+            .button_icon {
+              color: var(--text);
+            }
           }
         }
       }
@@ -169,12 +183,7 @@
   }
 }
 
-.tam {
-  color: white;
-}
-
 .thanks {
-  padding: 0 0 150px 0;
   &_wrapper {
     @include flex(column);
     text-align: center;
