@@ -7,9 +7,6 @@ header {
   @media (max-width: 575.98px) {
     height: 12vh;
   }
-  @media (max-height: 750px) {
-    height: 18vh;
-  }
 }
 .nav {
   @include flex(row, space-between);
@@ -24,7 +21,6 @@ header {
     @include flex(column);
     height: auto;
     padding: 20px;
-    gap: 20px;
   }
   @media (min-width: 1440px) and (max-width: 1660px) {
     padding: 30px 150px 30px 150px;
@@ -38,6 +34,7 @@ header {
   &_title {
     font-size: 1rem;
     @media (max-width: 575.98px) {
+      display: none;
     }
     &_highlight {
       color: var(--accent);
