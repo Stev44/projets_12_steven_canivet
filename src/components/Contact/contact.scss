@@ -194,11 +194,17 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      @media (min-width: 0px) and (max-width: 550px) {
+        font-size: 18px;
+      }
     }
     &_text {
       a {
         color: var(--accent);
         font-weight: 700;
+      }
+      @media (min-width: 0px) and (max-width: 550px) {
+        font-size: 14px;
       }
     }
     &_button {
