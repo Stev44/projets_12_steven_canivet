@@ -3,7 +3,7 @@
 .aboutSection {
   min-height: 100vh;
   height: auto;
-  @include flex(column, flex-start);
+  @include flex(column);
   .about {
     gap: 100px;
     @include flex(column);

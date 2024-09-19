@@ -1,6 +1,7 @@
 @import '../../style/main.scss';
 
 .course {
+  @include flex(column);
   background-color: var(--tertiary);
   height: auto;
   min-height: 100vh;
