@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/projets_12_steven_canivet/static/css/main.d69fa3e9.css",
+    "main.css": "/projets_12_steven_canivet/static/css/main.e1fc0b65.css",
     "main.js": "/projets_12_steven_canivet/static/js/main.e08e0d9b.js",
     "static/media/nina2.jpg": "/projets_12_steven_canivet/static/media/nina2.a7d4711be7f037af863b.jpg",
     "static/media/724.png": "/projets_12_steven_canivet/static/media/724.500f5e9e4311d8d5e13d.png",
@@ -27,11 +27,11 @@
     "static/media/arrowUp.svg": "/projets_12_steven_canivet/static/media/arrowUp.ffc357e41d1707af95e2d04ab3f69514.svg",
     "static/media/css.svg": "/projets_12_steven_canivet/static/media/css.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
     "static/media/html.svg": "/projets_12_steven_canivet/static/media/html.c1bb84e022ca9d76984d4b943bd678fd.svg",
-    "main.d69fa3e9.css.map": "/projets_12_steven_canivet/static/css/main.d69fa3e9.css.map",
+    "main.e1fc0b65.css.map": "/projets_12_steven_canivet/static/css/main.e1fc0b65.css.map",
     "main.e08e0d9b.js.map": "/projets_12_steven_canivet/static/js/main.e08e0d9b.js.map"
   },
   "entrypoints": [
-    "static/css/main.d69fa3e9.css",
+    "static/css/main.e1fc0b65.css",
     "static/js/main.e08e0d9b.js"
   ]
 }
