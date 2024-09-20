@@ -1,7 +1,7 @@
 import './skills.scss'
 import tech from '../../features/tech'
 
-const Course = () => {
+const Skills = () => {
   return (
     <section className="course padding" id="course">
       <div className="course_container margin">
@@ -21,4 +21,4 @@ const Course = () => {
   )
 }
 
-export default Course
+export default Skills

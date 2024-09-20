@@ -8,16 +8,16 @@ import { ReactComponent as Css } from '../assets/css.svg'
 import { ReactComponent as Js } from '../assets/js.svg'
 
 import project from '../assets/724.png'
-import test from '../assets/argentbank2.jpeg'
+import ab from '../assets/argentbank2.jpeg'
 import portfolio from '../assets/portfolio.webp'
-import land from '../assets/kasa2.jpg'
-import prog from '../assets/planche.webp'
-import landing from '../assets/nina2.jpg'
+import kasa from '../assets/kasa2.jpg'
+import leo from '../assets/planche.webp'
+import nina from '../assets/nina2.jpg'
 
 const content = [
   {
     title: 'Léo Vautrin Coaching',
-    img: prog,
+    img: leo,
     description: `Réalisation d'un site vitrine "from scratch", pour un coach sportif.`,
     technologies: [ReactIcon, Sass],
     site: 'https://stev44.github.io/leo_vautrin_coaching/',
@@ -31,14 +31,14 @@ const content = [
   },
   {
     title: 'Argent Bank',
-    img: test,
+    img: ab,
     description: `Réalisation d'un système d'authentification et des routes API pour les transactions.`,
     technologies: [ReactIcon, Redux, MongoDB, Css],
     code: 'https://github.com/Stev44/projet_11_steven_canivet',
   },
   {
     title: 'Kasa',
-    img: land,
+    img: kasa,
     description: `Réalisation d'un site de location immobilière.`,
     technologies: [ReactIcon, Sass],
     code: 'https://github.com/Stev44/projet_8_steven_canivet',
@@ -46,7 +46,7 @@ const content = [
   },
   {
     title: 'Nina Carducci',
-    img: landing,
+    img: nina,
     description: `Amélioration du référencement naturel (SEO) d'un site de photographe.`,
     technologies: [Js, Html, Css],
     code: 'https://github.com/Stev44/projet_9_steven_canivet',

@@ -32,10 +32,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_portfolio', // Remplace par ton Service ID
-        'template_portfolio', // Remplace par ton Template ID
+        'service_portfolio', //  Service ID
+        'template_portfolio', // Template ID
         formState,
-        'QeBm7uGs-Rbgo1Hq7' // Remplace par ton User ID
+        'QeBm7uGs-Rbgo1Hq7' // User ID
       )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text)
