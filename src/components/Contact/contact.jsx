@@ -9,7 +9,7 @@ import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [formState, setFormState] = useState({
-    name: '',
+    lastName: '',
     firstName: '',
     subject: '',
     email: '',
@@ -87,7 +87,7 @@ const Contact = () => {
               <div className="wrapper_container">
                 <div className="wrapper_container_inputs">
                   <label className="sr-only" htmlFor="lastName">
-                    Name
+                    LastName
                   </label>
                   <input
                     className="input"
@@ -95,7 +95,7 @@ const Contact = () => {
                     name="lastName"
                     id="lastName"
                     placeholder="Nom"
-                    value={formState.name}
+                    value={formState.lastName}
                     onChange={handleChange}
                     required
                   />
@@ -154,6 +154,7 @@ const Contact = () => {
                   className="textarea"
                   name="message"
                   id="message"
+                  placeholder="Message"
                   value={formState.message}
                   onChange={handleChange}
                   required
@@ -165,9 +166,11 @@ const Contact = () => {
               <FontAwesomeIcon icon={faPaperPlane} className="button_icon" />
             </button>
           </form>
-          <div>
-            <p>{confirmVisible && confirm}</p>
-          </div>
+          {confirmVisible && (
+            <div>
+              <p>{confirm}</p>
+            </div>
+          )}
         </div>
         <div className="thanks_wrapper margin">
           <h3 className="thanks_wrapper_title">MERCI POUR VOTRE ATTENTION</h3>

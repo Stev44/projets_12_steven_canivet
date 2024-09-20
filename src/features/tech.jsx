@@ -9,20 +9,20 @@ import { ReactComponent as Github } from '../assets/github.svg'
 
 const tech = [
   {
-    icon: Redux,
-    name: 'Redux',
-  },
-  {
     icon: ReactIcon,
     name: 'React',
   },
   {
-    icon: Sass,
-    name: 'Sass',
+    icon: Redux,
+    name: 'Redux',
   },
   {
     icon: Js,
     name: 'Javascript',
+  },
+  {
+    icon: Sass,
+    name: 'Sass',
   },
   {
     icon: Css,
