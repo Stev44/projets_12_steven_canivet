@@ -79,7 +79,7 @@ const Contact = () => {
             <div className="contact_group_infos_element">
               <Email className="contact_icon" />
               <h3>PAR MAIL</h3>
-              <p>steven.canivet@gmail.com</p>
+              <p>canivet.steven@gmail.com</p>
             </div>
           </div>
           <form className="form" onSubmit={handleSubmit}>
