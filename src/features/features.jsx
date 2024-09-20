@@ -8,11 +8,11 @@ import {
 
 export const socialMedia = [
   {
-    link: 'https://www.instagram.com/',
+    link: 'https://www.linkedin.com/',
     icon: <FontAwesomeIcon icon={faLinkedinIn} className="icons" />,
   },
   {
-    link: 'https://www.instagram.com/',
+    link: 'https://github.com/Stev44',
     icon: <FontAwesomeIcon icon={faGithub} className="icons" />,
   },
   {
@@ -20,7 +20,7 @@ export const socialMedia = [
     icon: <FontAwesomeIcon icon={faInstagram} className="icons" />,
   },
   {
-    link: 'https://www.instagram.com/',
+    link: 'https://x.com/',
     icon: <FontAwesomeIcon icon={faXTwitter} className="icons" />,
   },
 ]
