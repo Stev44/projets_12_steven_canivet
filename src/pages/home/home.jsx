@@ -1,7 +1,7 @@
 import Hero from '../../components/Hero/hero'
 import Projects from '../../components/Projects/projects'
 import About from '../../components/About/about'
-import Course from '../../components/Course/course'
+import Skills from '../../components/Skills/skills'
 import Contact from '../../components/Contact/contact'
 import './home.scss'
 import content from '../../features/contentProject'
@@ -14,7 +14,7 @@ const Home = () => {
       <Hero />
       <Projects content={content} options={OPTIONS} />
       <About />
-      <Course />
+      <Skills />
       <Contact />
     </main>
   )

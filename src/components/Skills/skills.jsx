@@ -1,4 +1,4 @@
-import './course.scss'
+import './skills.scss'
 import tech from '../../features/tech'
 
 const Course = () => {
