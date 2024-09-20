@@ -177,7 +177,7 @@ const Contact = () => {
           <p className="thanks_wrapper_text">
             Téléchargez mon{' '}
             {
-              <a href="/omf.jpg" download="omf.jpg">
+              <a href="/cv.txt" download="cv.txt">
                 CV
               </a>
             }{' '}
