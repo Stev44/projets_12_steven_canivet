@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/projets_12_steven_canivet/static/css/main.283fe374.css",
-    "main.js": "/projets_12_steven_canivet/static/js/main.1ca469aa.js",
+    "main.js": "/projets_12_steven_canivet/static/js/main.2c0cba1d.js",
     "static/media/nina2.jpg": "/projets_12_steven_canivet/static/media/nina2.a7d4711be7f037af863b.jpg",
     "static/media/724.png": "/projets_12_steven_canivet/static/media/724.500f5e9e4311d8d5e13d.png",
     "static/media/kasa2.jpg": "/projets_12_steven_canivet/static/media/kasa2.4855a011e02803dca4ab.jpg",
@@ -19,8 +19,8 @@
     "static/media/bag.svg": "/projets_12_steven_canivet/static/media/bag.3149023c5ca5cc8f4efca4e5eb16fb35.svg",
     "static/media/react.svg": "/projets_12_steven_canivet/static/media/react.a060cbe85e50deda1d61452cee9de5b2.svg",
     "static/media/figma.svg": "/projets_12_steven_canivet/static/media/figma.da040d302422e2e459bed05cef8a848b.svg",
-    "static/media/js.svg": "/projets_12_steven_canivet/static/media/js.081325c6f229605dce15142ddd948d6d.svg",
     "index.html": "/projets_12_steven_canivet/index.html",
+    "static/media/js.svg": "/projets_12_steven_canivet/static/media/js.081325c6f229605dce15142ddd948d6d.svg",
     "static/media/github.svg": "/projets_12_steven_canivet/static/media/github.482bc8b9ef70a822d8d50807a99c5007.svg",
     "static/media/phone.svg": "/projets_12_steven_canivet/static/media/phone.a2f07dbb5b63f400dde4d6470c0128d8.svg",
     "static/media/arrow.svg": "/projets_12_steven_canivet/static/media/arrow.4d8ec914bf32f05460aed10fb3caa725.svg",
@@ -28,10 +28,10 @@
     "static/media/css.svg": "/projets_12_steven_canivet/static/media/css.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
     "static/media/html.svg": "/projets_12_steven_canivet/static/media/html.c1bb84e022ca9d76984d4b943bd678fd.svg",
     "main.283fe374.css.map": "/projets_12_steven_canivet/static/css/main.283fe374.css.map",
-    "main.1ca469aa.js.map": "/projets_12_steven_canivet/static/js/main.1ca469aa.js.map"
+    "main.2c0cba1d.js.map": "/projets_12_steven_canivet/static/js/main.2c0cba1d.js.map"
   },
   "entrypoints": [
     "static/css/main.283fe374.css",
-    "static/js/main.1ca469aa.js"
+    "static/js/main.2c0cba1d.js"
   ]
 }
