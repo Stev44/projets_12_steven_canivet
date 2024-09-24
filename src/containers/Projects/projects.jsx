@@ -1,5 +1,5 @@
 import './projects.scss'
-import content from '../../features/contentProject'
+import { projects } from '../../utils/content'
 
 const Projects = () => {
   return (
@@ -7,7 +7,7 @@ const Projects = () => {
       <div className="projects_wrapper margin">
         <h2 className="underline">MES PROJETS</h2>
         <div className="wrapper">
-          {content.map((item, index) => (
+          {projects.map((item, index) => (
             <div className="map" key={index}>
               <h3>{item.title}</h3>
               <div className="card">

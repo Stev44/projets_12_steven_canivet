@@ -1,13 +1,15 @@
 import './contact.scss'
-import { ReactComponent as Email } from '../../assets/mail.svg'
-import { ReactComponent as Phone } from '../../assets/phone.svg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { icon } from '../../utils/icons'
 
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const linkedInIcon = icon[0].icon
+  const mailIcon = icon[1].icon
+  const phoneIcon = icon[2].icon
+  const paperPlaneIcon = icon[3].icon
+
   const [formState, setFormState] = useState({
     lastName: '',
     firstName: '',
@@ -71,15 +73,16 @@ const Contact = () => {
         <div className="contact_group margin">
           <div className="contact_group_infos">
             <div className="contact_group_infos_element">
-              <Phone className="contact_icon" />
-              <h3>PAR TÉLÉPHONE</h3>
-              <p>06 47 01 30 99</p>
+              {phoneIcon}
+              <h3>Tel</h3>
             </div>
-            <div className="contact_group_infos_separate"></div>
             <div className="contact_group_infos_element">
-              <Email className="contact_icon" />
-              <h3>PAR MAIL</h3>
-              <p>canivet.steven@gmail.com</p>
+              {mailIcon}
+              <h3>Email</h3>
+            </div>
+            <div className="contact_group_infos_element">
+              {linkedInIcon}
+              <h3>LinkedIn</h3>
             </div>
           </div>
           <form className="form" onSubmit={handleSubmit}>
@@ -163,7 +166,7 @@ const Contact = () => {
             </div>
             <button className="button" type="submit">
               <span className="sr-only">Contact button</span>
-              <FontAwesomeIcon icon={faPaperPlane} className="button_icon" />
+              {paperPlaneIcon}
             </button>
           </form>
           {confirmVisible && (

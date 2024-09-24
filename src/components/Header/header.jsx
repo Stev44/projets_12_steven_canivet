@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import './header.scss'
-import { ReactComponent as ArrowUp } from '../../assets/arrowUp.svg'
+import { ReactComponent as ArrowUp } from '../../assets/icons/arrowUp.svg'
 import React, { useEffect, useState } from 'react'
-import { scrollToSection } from '../../features/function'
+import { scrollToSection } from '../../utils/function'
 
 const Header = React.memo(() => {
   const [visible, setVisible] = useState(false)

@@ -17,15 +17,11 @@
       @include flex(column);
       height: 100%;
       width: 100%;
-      gap: 50px;
+      gap: 30px;
       &_infos {
         @include flex(row, space-between);
         position: relative;
         width: 50%;
-        background-color: var(--tertiary);
-        border-radius: 10px;
-        border: 2px solid var(--tertiary);
-        padding: 20px;
         @media (min-width: 0px) and (max-width: 550px) {
           width: 100%;
           gap: 10px;
@@ -47,38 +43,31 @@
         }
         &_element {
           @include flex(column);
-          gap: 30px;
+          gap: 10px;
+          background-color: var(--tertiary);
+          border: 1px solid var(--tertiary);
+          width: 30%;
+          height: 120px;
+          border-radius: 10px;
+          transition: 0.4s;
+          cursor: pointer;
           .contact_icon {
-            width: 48px;
-            height: 48px;
-            fill: var(--accent);
-            stroke: var(--accent);
+            width: 32px;
+            height: 32px;
+            fill: var(--text);
             @media (max-width: 575.98px) {
               width: 32px;
               height: 32px;
             }
           }
           h3 {
-            font-size: 24px;
+            font-size: 18px;
+            font-weight: normal;
+            letter-spacing: 1px;
             @media (min-width: 0px) and (max-width: 550px) {
               font-size: 14px;
             }
           }
-          p {
-            color: var(--accent);
-            @media (min-width: 0px) and (max-width: 550px) {
-              font-size: 10px;
-            }
-          }
-        }
-        &_separate {
-          position: absolute;
-          left: 50%;
-          top: 10;
-          bottom: 10;
-          height: 90%;
-          width: 0px;
-          border: 1px solid var(--text);
         }
       }
       .form {

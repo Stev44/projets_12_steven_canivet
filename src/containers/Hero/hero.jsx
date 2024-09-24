@@ -1,9 +1,9 @@
 import './hero.scss'
-import Socials from '../socials/socials'
-import { ReactComponent as Arrow } from '../../assets/arrow.svg'
-import ParticlesComponent from '../Particles/particles'
-import profile from '../../assets/profil.jpg'
-import { scrollToSection } from '../../features/function'
+import Socials from '../../components/socials/socials'
+import { ReactComponent as ArrowDown } from '../../assets/icons/arrowDown.svg'
+import ParticlesComponent from '../../components/Particles/particles'
+import profile from '../../assets/images/profil.jpg'
+import { scrollToSection } from '../../utils/function'
 
 const Hero = () => {
   return (
@@ -17,7 +17,9 @@ const Hero = () => {
               <strong>Développeur front-end</strong>
             </p>
             <p className="wrapper_description">Passionné par la création</p>
-            <Socials />
+            <div className="socials">
+              <Socials hero="socials_icon" />
+            </div>
             <button
               className="wrapper_button"
               onClick={() => scrollToSection('contact')}
@@ -31,7 +33,7 @@ const Hero = () => {
         </div>
         <button className="button" onClick={() => scrollToSection('projects')}>
           <span className="sr-only">Nav button</span>
-          <Arrow className="button_arrow" />
+          <ArrowDown className="button_arrow" />
         </button>
       </div>
     </section>

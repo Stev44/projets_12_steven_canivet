@@ -1,16 +1,15 @@
-import { socialMedia } from '../../features/features'
-import './socials.scss'
+import { socialMedia } from '../../utils/icons'
 
-const Socials = () => {
+const Socials = ({ hero, footer }) => {
   return (
-    <div className="socials">
+    <>
       {socialMedia.map((item, index) => (
         <a key={index} href={item.link}>
-          <span className="socials_icon">{item.icon}</span>
+          <span className={footer || hero}>{item.icon}</span>
           <span className="sr-only">Social button</span>
         </a>
       ))}
-    </div>
+    </>
   )
 }
 

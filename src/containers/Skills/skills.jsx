@@ -1,5 +1,5 @@
 import './skills.scss'
-import tech from '../../features/tech'
+import { tech } from '../../utils/content'
 
 const Skills = () => {
   return (

@@ -1,20 +1,21 @@
-import { ReactComponent as Redux } from '../assets/redux.svg'
-import { ReactComponent as ReactIcon } from '../assets/react.svg'
-import { ReactComponent as Sass } from '../assets/sass.svg'
-import { ReactComponent as Html } from '../assets/html.svg'
-import { ReactComponent as MongoDB } from '../assets/mongoDB.svg'
-import { ReactComponent as Figma } from '../assets/figma.svg'
-import { ReactComponent as Css } from '../assets/css.svg'
-import { ReactComponent as Js } from '../assets/js.svg'
+import { ReactComponent as Redux } from '../assets/tech/redux.svg'
+import { ReactComponent as ReactIcon } from '../assets/tech/react.svg'
+import { ReactComponent as Sass } from '../assets/tech/sass.svg'
+import { ReactComponent as Html } from '../assets/tech/html.svg'
+import { ReactComponent as MongoDB } from '../assets/tech/mongoDB.svg'
+import { ReactComponent as Figma } from '../assets/tech/figma.svg'
+import { ReactComponent as Css } from '../assets/tech/css.svg'
+import { ReactComponent as Js } from '../assets/tech/js.svg'
+import { ReactComponent as Github } from '../assets/tech/github.svg'
 
-import project from '../assets/724.png'
-import ab from '../assets/argentbank2.jpeg'
-import portfolio from '../assets/portfolio.webp'
-import kasa from '../assets/kasa2.jpg'
-import leo from '../assets/planche.webp'
-import nina from '../assets/nina2.jpg'
+import project from '../assets/images/724.png'
+import ab from '../assets/images/argentbank2.jpeg'
+import portfolio from '../assets/images/portfolio.webp'
+import kasa from '../assets/images/kasa2.jpg'
+import leo from '../assets/images/planche.webp'
+import nina from '../assets/images/nina2.jpg'
 
-const content = [
+export const projects = [
   {
     title: 'Léo Vautrin Coaching',
     img: leo,
@@ -60,4 +61,38 @@ const content = [
     code: 'https://github.com/Stev44/projet_10_steven_canivet',
   },
 ]
-export default content
+
+export const tech = [
+  {
+    icon: ReactIcon,
+    name: 'React',
+  },
+  {
+    icon: Redux,
+    name: 'Redux',
+  },
+  {
+    icon: Js,
+    name: 'Javascript',
+  },
+  {
+    icon: Sass,
+    name: 'Sass',
+  },
+  {
+    icon: Css,
+    name: 'CSS',
+  },
+  {
+    icon: Html,
+    name: 'HTML',
+  },
+  {
+    icon: Figma,
+    name: 'Figma',
+  },
+  {
+    icon: Github,
+    name: 'Github',
+  },
+]

@@ -1,8 +1,8 @@
 import './about.scss'
-import { ReactComponent as Pro } from '../../assets/bag.svg'
-import { ReactComponent as Gear } from '../../assets/gear.svg'
-import { ReactComponent as Hand } from '../../assets/hand.svg'
-import { ReactComponent as Book } from '../../assets/book.svg'
+import { ReactComponent as Pro } from '../../assets/icons/bag.svg'
+import { ReactComponent as Gear } from '../../assets/icons/gear.svg'
+import { ReactComponent as Hand } from '../../assets/icons/hand.svg'
+import { ReactComponent as Book } from '../../assets/icons/book.svg'
 
 const About = () => {
   return (

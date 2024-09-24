@@ -1,16 +1,11 @@
 import './footer.scss'
-import { socialMedia } from '../../features/features'
+import Socials from '../socials/socials'
 
 const Footer = () => {
   return (
     <footer>
       <div className="footer">
-        {socialMedia.map((item, index) => (
-          <a key={index} href={item.link}>
-            <span className="sr-only">Social button</span>
-            <span className="footer_icon">{item.icon}</span>
-          </a>
-        ))}
+        <Socials footer="footer_icon" />
       </div>
 
       <p>© Steven Canivet | Tous droits réservés</p>
