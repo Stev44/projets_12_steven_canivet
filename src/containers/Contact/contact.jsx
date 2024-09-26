@@ -1,14 +1,21 @@
 import './contact.scss'
 import { icon } from '../../utils/icons'
-
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const [copyPhoneSuccess, setCopyPhoneSuccess] = useState('')
+  const [copyMailSuccess, setCopyMailSuccess] = useState('')
   const linkedInIcon = icon[0].icon
   const mailIcon = icon[1].icon
   const phoneIcon = icon[2].icon
   const paperPlaneIcon = icon[3].icon
+
+  const info = {
+    phone: '06 47 01 30 99',
+    mail: 'canivet.steven@gmail.com',
+    linkedIn: 'Voir le profil',
+  }
 
   const [formState, setFormState] = useState({
     lastName: '',
@@ -34,21 +41,21 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_portfolio', //  Service ID
-        'template_portfolio', // Template ID
+        'service_portfolio',
+        'template_portfolio',
         formState,
-        'QeBm7uGs-Rbgo1Hq7' // User ID
+        'QeBm7uGs-Rbgo1Hq7'
       )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text)
         setFormState({
-          name: '',
+          lastName: '',
           firstName: '',
           subject: '',
           email: '',
           message: '',
         })
-        setConfirm('Le message à bien été envoyé')
+        setConfirm('Le message a bien été envoyé')
         setConfirmVisible(true)
         setTimeout(() => {
           setConfirmVisible(false)
@@ -57,7 +64,7 @@ const Contact = () => {
       .catch((err) => {
         console.error('FAILED...', err)
         setConfirm(
-          `En raison d'une erreur le message ne s'est pas envoyé correctement`
+          `En raison d'une erreur, le message ne s'est pas envoyé correctement`
         )
         setConfirmVisible(true)
         setTimeout(() => {
@@ -66,21 +73,63 @@ const Contact = () => {
       })
   }
 
+  const copyToClipboard = async (e, type) => {
+    try {
+      const copyText = e.currentTarget.querySelector('.copyText').textContent
+
+      await navigator.clipboard.writeText(copyText)
+
+      // Met à jour le message de succès en fonction de l'élément cliqué
+      if (type === 'phone') {
+        setCopyPhoneSuccess('Numéro copié !')
+      } else if (type === 'email') {
+        setCopyMailSuccess('Email copié !')
+      }
+
+      // Réinitialiser le message après 2 secondes
+      setTimeout(() => {
+        setCopyPhoneSuccess('')
+      }, 2000)
+      setTimeout(() => {
+        setCopyMailSuccess('')
+      }, 2000)
+    } catch (err) {
+      console.log('Échec de la copie')
+    }
+  }
+  const navigateToProfile = () => {
+    window.open('https://www.linkedin.com/', '_blank')
+  }
+
   return (
     <section className="contactSection padding" id="contact">
       <div className="contact margin">
         <h2 className="underline">CONTACTEZ MOI</h2>
         <div className="contact_group margin">
           <div className="contact_group_infos">
-            <div className="contact_group_infos_element">
+            <div
+              data-info={copyPhoneSuccess || info.phone}
+              className="contact_group_infos_element"
+              onClick={(e) => copyToClipboard(e, 'phone')}
+            >
               {phoneIcon}
               <h3>Tel</h3>
+              <p className="hiddenText copyText">06 47 01 30 99</p>
             </div>
-            <div className="contact_group_infos_element">
+            <div
+              data-info={copyMailSuccess || info.mail}
+              className="contact_group_infos_element"
+              onClick={(e) => copyToClipboard(e, 'email')}
+            >
               {mailIcon}
               <h3>Email</h3>
+              <p className="hiddenText copyText">canivet.steven@gmail.com</p>
             </div>
-            <div className="contact_group_infos_element">
+            <div
+              data-info="Voir le profil"
+              className="contact_group_infos_element"
+              onClick={navigateToProfile}
+            >
               {linkedInIcon}
               <h3>LinkedIn</h3>
             </div>
@@ -179,11 +228,9 @@ const Contact = () => {
           <h3 className="thanks_wrapper_title">MERCI POUR VOTRE ATTENTION</h3>
           <p className="thanks_wrapper_text">
             Téléchargez mon{' '}
-            {
-              <a href="/cv.txt" download="cv.txt">
-                CV
-              </a>
-            }{' '}
+            <a href="/cv.txt" download="cv.txt">
+              CV
+            </a>{' '}
             si vous souhaitez plus d'informations
           </p>
         </div>
