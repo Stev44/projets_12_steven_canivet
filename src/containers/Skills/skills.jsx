@@ -3,7 +3,7 @@ import { tech } from '../../utils/content'
 
 const Skills = () => {
   return (
-    <section className="course padding" id="course">
+    <section className="course padding" id="skills">
       <div className="course_container margin">
         <h2 className="underline">COMPÉTENCES</h2>
         <div className="wrapper">

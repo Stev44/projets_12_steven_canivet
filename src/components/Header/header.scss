@@ -33,7 +33,7 @@ header {
   }
   &_title {
     font-size: 1rem;
-    @media (max-width: 575.98px) {
+    @media (max-width: 750px) {
       display: none;
     }
     &_highlight {
@@ -50,6 +50,10 @@ header {
       width: 100%;
       gap: 0px;
       font-size: 0.8rem;
+    }
+    @media (max-width: 750px) {
+      @include flex(row, space-between);
+      width: 100%;
     }
     &_section {
       z-index: 1;

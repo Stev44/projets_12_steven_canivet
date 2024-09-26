@@ -3,8 +3,13 @@ import { ReactComponent as Pro } from '../../assets/icons/bag.svg'
 import { ReactComponent as Gear } from '../../assets/icons/gear.svg'
 import { ReactComponent as Hand } from '../../assets/icons/hand.svg'
 import { ReactComponent as Book } from '../../assets/icons/book.svg'
+import { aboutDataEn, aboutDataFr } from '../../utils/data'
+import { useSelector } from 'react-redux'
 
 const About = () => {
+  const lang = useSelector((state) => state.switchLang.lang)
+  console.log(lang)
+
   return (
     <section className="aboutSection padding" id="about">
       <div className="about margin">
@@ -38,29 +43,7 @@ const About = () => {
               </div>
             </div>
             <div className="about_wrapper_text">
-              <p>
-                Je m'appelle Steven Canivet et je suis développeur{' '}
-                <strong>front-end</strong> basé à Nantes.
-              </p>
-              <p>
-                Mon parcours est atypique et témoigne de ma polyvalence. Après
-                un BTS en commerce international et une licence en communication
-                et marketing, j’ai occupé pendant un an le poste de brancardier
-                à l’Hôpital Privé du Confluent, poussé par mon intérêt pour
-                l’aide à la personne.
-              </p>
-              <p>
-                Animé par une passion pour la création, j’ai décidé de me
-                reconvertir dans le développement web. J'ai suivi une formation
-                de 9 mois chez <strong>OpenClassrooms</strong>, sous la
-                supervision d’un mentor expérimenté.
-              </p>
-              <p>
-                Parallèlement, ma créativité me pousse à consacrer mon temps
-                libre au développement de jeux et d’interactions pour des sites
-                web, ce qui nourrit et renforce ma passion pour le métier de
-                développeur web.
-              </p>
+              {lang === false ? aboutDataFr.text : aboutDataEn.text}
             </div>
           </div>
           <div className="line"></div>

@@ -22,9 +22,8 @@
         @include flex(row, space-between);
         position: relative;
         width: 50%;
-        @media (min-width: 0px) and (max-width: 550px) {
+        @media (max-width: 850px) {
           width: 100%;
-          gap: 10px;
         }
         @media (min-width: 1440px) and (max-width: 1660px) {
           width: 60%;
@@ -34,12 +33,6 @@
         }
         @media (min-width: 850px) and (max-width: 1249px) {
           width: 80%;
-        }
-        @media (min-width: 550px) and (max-width: 850px) {
-          width: 100%;
-        }
-        @media (max-width: 575px) {
-          padding: 20px 10px 20px 10px;
         }
         &_element {
           @include flex(column);
@@ -51,21 +44,25 @@
           border-radius: 10px;
           transition: 0.4s;
           cursor: pointer;
+          @media (max-width: 575.98px) {
+            height: 90px;
+            width: 31%;
+          }
           .contact_icon {
             width: 32px;
             height: 32px;
             fill: var(--text);
             @media (max-width: 575.98px) {
-              width: 32px;
-              height: 32px;
+              width: 24px;
+              height: 24px;
             }
           }
           h3 {
-            font-size: 18px;
+            font-size: 1rem;
             font-weight: normal;
             letter-spacing: 1px;
             @media (min-width: 0px) and (max-width: 550px) {
-              font-size: 14px;
+              font-size: 0.8rem;
             }
           }
         }
@@ -73,9 +70,10 @@
       .form {
         @include flex(column);
         gap: 50px;
-        width: 50%;
+        min-width: 50%;
         @media (min-width: 0px) and (max-width: 850px) {
           width: 100%;
+          gap: 20px;
         }
         @media (min-width: 1440px) and (max-width: 1660px) {
           width: 60%;
@@ -155,10 +153,18 @@
           border: none;
           background-color: var(--accent);
           transition: 0.4s;
+          @media (max-width: 575.98px) {
+            height: 40px;
+            width: 120px;
+            border-radius: 10px;
+          }
           &_icon {
             font-size: 32px;
             color: var(--background);
             transition: 0.4s;
+            @media (max-width: 575.98px) {
+              font-size: 24px;
+            }
           }
           &:hover {
             transform: scale(0.9);
