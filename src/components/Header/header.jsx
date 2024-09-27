@@ -40,10 +40,10 @@ const Header = React.memo(() => {
     setLoaderVisible(true)
     setLoaderActive(true)
 
-    setTimeout(() => {
-      dispatch(setLang({ lang: !lang }))
-      setLoaderActive(false)
-    }, 1000)
+    // setTimeout(() => {
+    dispatch(setLang({ lang: !lang }))
+    setLoaderActive(false)
+    // }, 1000)
   }
 
   const handleAnimationEnd = () => {

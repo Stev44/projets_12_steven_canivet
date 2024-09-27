@@ -237,7 +237,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       @media (min-width: 0px) and (max-width: 550px) {
-        font-size: 18px;
+        font-size: 2rem;
       }
     }
     &_text {
@@ -246,7 +246,7 @@
         font-weight: 700;
       }
       @media (min-width: 0px) and (max-width: 550px) {
-        font-size: 14px;
+        font-size: 0.8rem;
       }
     }
     &_button {
