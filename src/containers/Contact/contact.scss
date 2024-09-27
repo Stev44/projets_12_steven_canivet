@@ -45,6 +45,7 @@
           border-radius: 10px;
           transition: 0.4s;
           cursor: pointer;
+          user-select: none;
           @media (max-width: 575.98px) {
             height: 90px;
             width: 31%;

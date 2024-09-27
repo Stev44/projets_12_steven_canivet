@@ -2,8 +2,11 @@ import './contact.scss'
 import { icon } from '../../utils/icons'
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { useSelector } from 'react-redux'
+import { contactLang, sectionLang } from '../../utils/data'
 
 const Contact = () => {
+  const lang = useSelector((state) => state.switchLang.lang)
   const [copyPhoneSuccess, setCopyPhoneSuccess] = useState('')
   const [copyMailSuccess, setCopyMailSuccess] = useState('')
   const linkedInIcon = icon[0].icon
@@ -81,9 +84,13 @@ const Contact = () => {
 
       // Met à jour le message de succès en fonction de l'élément cliqué
       if (type === 'phone') {
-        setCopyPhoneSuccess('Numéro copié !')
+        setCopyPhoneSuccess(
+          !lang ? contactLang.copyPhoneFr : contactLang.copyPhoneEn
+        )
       } else if (type === 'email') {
-        setCopyMailSuccess('Email copié !')
+        setCopyMailSuccess(
+          !lang ? contactLang.copyMailFr : contactLang.copyMailEn
+        )
       }
 
       // Réinitialiser le message après 2 secondes
@@ -104,7 +111,9 @@ const Contact = () => {
   return (
     <section className="contactSection padding" id="contact">
       <div className="contact margin">
-        <h2 className="underline">CONTACTEZ MOI</h2>
+        <h2 className="underline">
+          {!lang ? sectionLang.contactFr : sectionLang.contactEn}
+        </h2>
         <div className="contact_group margin">
           <div className="contact_group_infos">
             <div
@@ -126,7 +135,7 @@ const Contact = () => {
               <p className="hiddenText copyText">canivet.steven@gmail.com</p>
             </div>
             <div
-              data-info="Voir le profil"
+              data-info={!lang ? contactLang.profileFr : contactLang.profileEn}
               className="contact_group_infos_element"
               onClick={navigateToProfile}
             >
@@ -146,7 +155,9 @@ const Contact = () => {
                     type="text"
                     name="lastName"
                     id="lastName"
-                    placeholder="Nom"
+                    placeholder={
+                      !lang ? contactLang.lastNameFr : contactLang.lastNameEn
+                    }
                     value={formState.lastName}
                     onChange={handleChange}
                     required
@@ -161,7 +172,9 @@ const Contact = () => {
                     type="text"
                     name="firstName"
                     id="firstName"
-                    placeholder="Prénom"
+                    placeholder={
+                      !lang ? contactLang.firstNameFr : contactLang.firstNameEn
+                    }
                     value={formState.firstName}
                     onChange={handleChange}
                     required
@@ -176,7 +189,9 @@ const Contact = () => {
                     type="text"
                     name="subject"
                     id="subject"
-                    placeholder="Objet"
+                    placeholder={
+                      !lang ? contactLang.subjectFr : contactLang.subjectEn
+                    }
                     value={formState.subject}
                     onChange={handleChange}
                     required
@@ -225,14 +240,10 @@ const Contact = () => {
           )}
         </div>
         <div className="thanks_wrapper margin">
-          <h3 className="thanks_wrapper_title">MERCI POUR VOTRE ATTENTION</h3>
-          <p className="thanks_wrapper_text">
-            Téléchargez mon{' '}
-            <a href="/cv.txt" download="cv.txt">
-              CV
-            </a>{' '}
-            si vous souhaitez plus d'informations
-          </p>
+          <h3 className="thanks_wrapper_title">
+            {!lang ? contactLang.thanksFr : contactLang.thanksEn}
+          </h3>
+          {!lang ? contactLang.cvFr : contactLang.cvEn}
         </div>
       </div>
     </section>

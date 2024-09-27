@@ -1,11 +1,16 @@
 import './projects.scss'
 import { projects } from '../../utils/content'
+import { useSelector } from 'react-redux'
+import { sectionLang } from '../../utils/data'
 
 const Projects = () => {
+  const lang = useSelector((state) => state.switchLang.lang)
   return (
     <section className="projects padding" id="projects">
       <div className="projects_wrapper margin">
-        <h2 className="underline">MES PROJETS</h2>
+        <h2 className="underline">
+          {!lang ? sectionLang.projectsFr : sectionLang.projectsEn}
+        </h2>
         <div className="wrapper">
           {projects.map((item, index) => (
             <div className="map" key={index}>
@@ -22,7 +27,7 @@ const Projects = () => {
                       ))}
                     </div>
                     <div className="card_img_description">
-                      <p>{item.description}</p>
+                      <p>{!lang ? item.descriptionFr : item.descriptionEn}</p>
                     </div>
                     <div className="card_img_button">
                       {item.code && (
@@ -33,7 +38,7 @@ const Projects = () => {
                               target="_blank"
                               rel="noreferrer"
                             >
-                              Voir le code
+                              {!lang ? item.codeTextFr : item.codeTextEn}
                             </a>
                           </p>
                         </button>
@@ -46,7 +51,7 @@ const Projects = () => {
                               target="_blank"
                               rel="noreferrer"
                             >
-                              Voir le site
+                              {!lang ? item.siteTextFr : item.siteTextEn}
                             </a>
                           </p>
                         </button>

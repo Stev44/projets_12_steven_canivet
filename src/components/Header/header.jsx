@@ -1,19 +1,23 @@
 import { Link } from 'react-router-dom'
 import './header.scss'
 import { ReactComponent as ArrowUp } from '../../assets/icons/arrowUp.svg'
+import { ReactComponent as France } from '../../assets/icons/france.svg'
+import { ReactComponent as Uk } from '../../assets/icons/uk.svg'
 import React, { useEffect, useState } from 'react'
 import { scrollToSection } from '../../utils/function'
 import { useDispatch, useSelector } from 'react-redux'
 import { setLang } from '../../store/slice'
-import { navEn, navFr } from '../../utils/data'
+import { navLang } from '../../utils/data'
 
 const Header = React.memo(() => {
   const dispatch = useDispatch()
   const lang = useSelector((state) => state.switchLang.lang)
-  const fadeClass = useSelector((state) => state.animation.fadeClass)
   const [visible, setVisible] = useState(false)
+  const [loaderActive, setLoaderActive] = useState(false)
+  const [loaderVisible, setLoaderVisible] = useState(false)
+  const [completedAnimations, setCompletedAnimations] = useState(0)
 
-  /* Permet d'afficher le bouton a 200px de scroll en dessous la section Hero et permet aussi d'attribuer */
+  // Permet d'afficher le bouton à 200px de scroll en dessous la section Hero et permet aussi d'attribuer
   useEffect(() => {
     const handleScroll = () => {
       const scrollVisible = 200
@@ -32,6 +36,27 @@ const Header = React.memo(() => {
     }
   }, [])
 
+  const handleLangChange = () => {
+    setLoaderVisible(true)
+    setLoaderActive(true)
+
+    setTimeout(() => {
+      dispatch(setLang({ lang: !lang }))
+      setLoaderActive(false)
+    }, 1000)
+  }
+
+  const handleAnimationEnd = () => {
+    setCompletedAnimations((prev) => prev + 1)
+  }
+
+  useEffect(() => {
+    if (completedAnimations === 10) {
+      setLoaderVisible(false)
+      setCompletedAnimations(0)
+    }
+  }, [completedAnimations])
+
   return (
     <header id="header">
       <nav className="nav">
@@ -41,29 +66,22 @@ const Header = React.memo(() => {
           </h1>
         </Link>
         <div className="nav_links">
-          {lang === false
-            ? navFr.map((item, index) => (
-                <Link
-                  onClick={() => scrollToSection(item.id)}
-                  className={`${item.class} ${fadeClass}`}
-                  key={index}
-                >
-                  {item.name}
-                </Link>
-              ))
-            : navEn.map((item, index) => (
-                <Link
-                  onClick={() => scrollToSection(item.id)}
-                  className={`${item.class} ${fadeClass}`}
-                  key={index}
-                >
-                  {item.name}
-                </Link>
-              ))}
-
-          {/* <button onClick={() => dispatch(setLang({ lang: !lang }))}>
-            Lang
-          </button> */}
+          {navLang.map((item, index) => (
+            <Link
+              onClick={() => scrollToSection(item.id)}
+              className={item.class}
+              key={index}
+            >
+              {!lang ? item.nameFr : item.nameEn}
+            </Link>
+          ))}
+          <button className="nav_links_button" onClick={handleLangChange}>
+            {!lang ? (
+              <France className="nav_links_button_icon" />
+            ) : (
+              <Uk className="nav_links_button_icon" />
+            )}
+          </button>
         </div>
         <button
           onClick={() => scrollToSection('header')}
@@ -73,6 +91,20 @@ const Header = React.memo(() => {
           <ArrowUp className="arrow" />
         </button>
       </nav>
+
+      {/* Masquer le loader si loaderVisible est faux */}
+      {loaderVisible && (
+        <div className="loader">
+          {Array.from({ length: 10 }, (_, index) => (
+            <div
+              key={index}
+              className={`loader_item ${loaderActive ? 'active' : ''}`}
+              id={`item${index}`}
+              onAnimationEnd={handleAnimationEnd} // Appelle la fonction quand une animation se termine
+            ></div>
+          ))}
+        </div>
+      )}
     </header>
   )
 })

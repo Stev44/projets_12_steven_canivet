@@ -14,19 +14,4 @@ export const switchSlice = createSlice({
   },
 })
 
-export const animationSlice = createSlice({
-  name: 'animation',
-  initialState: {
-    fadeClass: '',
-  },
-  reducers: {
-    setFadeClass(state, action) {
-      if (action.payload.fadeClass !== undefined) {
-        state.fadeClass = action.payload.fadeClass
-      }
-    },
-  },
-})
-
 export const { setLang } = switchSlice.actions
-export const { setFadeClass } = animationSlice.actions

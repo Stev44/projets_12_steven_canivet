@@ -1,5 +1,5 @@
-export const aboutDataEn = {
-  text: (
+export const aboutDataLang = {
+  textEn: (
     <>
       <p>
         My name is Steven Canivet, and I am a <strong>front-end</strong>{' '}
@@ -24,10 +24,7 @@ export const aboutDataEn = {
       </p>
     </>
   ),
-}
-
-export const aboutDataFr = {
-  text: (
+  textFr: (
     <>
       <p>
         Je m'appelle Steven Canivet et je suis développeur{' '}
@@ -54,60 +51,100 @@ export const aboutDataFr = {
   ),
 }
 
-export const navEn = [
-  {
-    name: 'Projects',
-    id: 'projects',
-    class: 'nav_links_section',
-  },
-  {
-    name: 'About',
-    id: 'about',
-    class: 'nav_links_section',
-  },
-  {
-    name: 'Skills',
-    id: 'skills',
-    class: 'nav_links_section',
-  },
-  {
-    name: 'Contact',
-    id: 'contact',
-    class: 'nav_links_contact',
-  },
-]
-
-export const navFr = [
-  {
-    name: 'Projets',
-    id: 'projects',
-    class: 'nav_links_section',
-  },
-  {
-    name: 'À propos',
-    id: 'about',
-    class: 'nav_links_section',
-  },
-  {
-    name: 'Compétences',
-    id: 'skills',
-    class: 'nav_links_section',
-  },
-  {
-    name: 'Contact',
-    id: 'contact',
-    class: 'nav_links_contact',
-  },
-]
-
-export const heroEn = {
-  strong: 'Front-end developer',
-  description: 'Passionate by creation',
-  button: 'Contact me',
+export const qualityLang = {
+  curiosityEn: 'Curiosity',
+  teamEn: 'Team spirit',
+  professionalEn: 'Professional',
+  curiosityFr: 'Curiosité',
+  teamFr: `Esprit d'équipe`,
+  professionalFr: 'Professionnel',
 }
 
-export const heroFr = {
-  strong: 'Développeur front-end',
-  description: 'Passionné par la création',
-  button: 'Me contacter',
+export const navLang = [
+  {
+    nameEn: 'Projects',
+    nameFr: 'Projets',
+    id: 'projects',
+    class: 'nav_links_section',
+  },
+  {
+    nameEn: 'About',
+    nameFr: 'À propos',
+    id: 'about',
+    class: 'nav_links_section',
+  },
+  {
+    nameEn: 'Skills',
+    nameFr: 'Compétences',
+    id: 'skills',
+    class: 'nav_links_section',
+  },
+  {
+    nameEn: 'Contact',
+    nameFr: 'Contact',
+    id: 'contact',
+    class: 'nav_links_contact',
+  },
+]
+
+export const heroLang = {
+  strongEn: 'Front-end developer',
+  descriptionEn: 'Passionate by creation',
+  buttonEn: 'Contact me',
+  strongFr: 'Développeur front-end',
+  descriptionFr: 'Passionné par la création',
+  buttonFr: 'Me contacter',
+}
+
+export const sectionLang = {
+  projectsEn: 'MY PROJECTS',
+  aboutEn: 'ABOUT ME',
+  skillsEn: 'SKILLS',
+  contactEn: 'CONTACT ME',
+  projectsFr: 'MES PROJETS',
+  aboutFr: 'À PROPOS DE MOI',
+  skillsFr: 'COMPÉTENCES',
+  contactFr: 'ME CONTACTER',
+}
+
+export const contactLang = {
+  phoneEn: 'Phone',
+  lastNameEn: 'Last name',
+  firstNameEn: 'First name',
+  subjectEn: 'Subject',
+  thanksEn: 'THANK YOU FOR SCROLLING',
+  cvEn: (
+    <p className="thanks_wrapper_text">
+      Download my{' '}
+      <a href="/cv.txt" download="cv.txt">
+        resume
+      </a>{' '}
+      for more information
+    </p>
+  ),
+  copyPhoneEn: 'Number copied !',
+  copyMailEn: 'Email copied !',
+  profileEn: 'View profile',
+  phoneFr: 'Tel',
+  lastNameFr: 'Nom',
+  firstNameFr: 'Prénom',
+  subjectFr: 'Objet',
+  thanksFr: 'MERCI POUR VOTRE ATTENTION',
+  cvFr: (
+    <p className="thanks_wrapper_text">
+      Téléchargez mon{' '}
+      <a href="/cv.txt" download="cv.txt">
+        CV
+      </a>{' '}
+      si vous souhaitez plus d'informations
+    </p>
+  ),
+  copyPhoneFr: 'Numéro copié !',
+  copyMailFr: 'Email copié !',
+  profileFr: 'Voir le profil',
+}
+
+export const footerLang = {
+  rightsEn: 'All rights deserved',
+  rightsFr: 'Tous droits réservés',
 }

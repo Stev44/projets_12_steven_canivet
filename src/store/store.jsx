@@ -1,11 +1,10 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import { animationSlice, switchSlice } from './slice'
+import { switchSlice } from './slice'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
 const reducer = combineReducers({
   switchLang: switchSlice.reducer,
-  animation: animationSlice.reducer,
 })
 
 const configPersist = {
