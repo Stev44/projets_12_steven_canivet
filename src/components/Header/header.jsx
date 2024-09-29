@@ -108,9 +108,10 @@ const Header = React.memo(() => {
           <span className="sr-only">Nav button</span>
           <ArrowUp className="arrow" />
         </button>
+        {mobileButton && <div className="navModal"></div>}
       </nav>
 
-      {/* Masquer le loader si loaderVisible est faux */}
+      {/* Masquer le loader si loaderVisible est faux
       {loaderVisible && (
         <div className="loader">
           {Array.from({ length: 10 }, (_, index) => (
@@ -122,7 +123,7 @@ const Header = React.memo(() => {
             ></div>
           ))}
         </div>
-      )}
+      )} */}
     </header>
   )
 })
