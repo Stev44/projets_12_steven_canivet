@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import './header.scss'
 import { ReactComponent as ArrowUp } from '../../assets/icons/arrowUp.svg'
 import { ReactComponent as France } from '../../assets/icons/france.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons'
 import { ReactComponent as Uk } from '../../assets/icons/uk.svg'
 import React, { useEffect, useState } from 'react'
 import { scrollToSection } from '../../utils/function'
@@ -16,6 +18,7 @@ const Header = React.memo(() => {
   const [loaderActive, setLoaderActive] = useState(false)
   const [loaderVisible, setLoaderVisible] = useState(false)
   const [completedAnimations, setCompletedAnimations] = useState(0)
+  const [mobileButton, setMobileButton] = useState(false)
 
   // Permet d'afficher le bouton à 200px de scroll en dessous la section Hero et permet aussi d'attribuer
   useEffect(() => {
@@ -50,6 +53,10 @@ const Header = React.memo(() => {
     setCompletedAnimations((prev) => prev + 1)
   }
 
+  const handleMobileBar = () => {
+    setMobileButton(!mobileButton)
+  }
+
   useEffect(() => {
     if (completedAnimations === 10) {
       setLoaderVisible(false)
@@ -65,7 +72,11 @@ const Header = React.memo(() => {
             Steven <strong className="nav_title_highlight">Canivet</strong>
           </h1>
         </Link>
-        <div className="nav_links">
+        <div
+          className={`nav_links ${
+            mobileButton ? 'nav_linksActive' : 'nav_linksHidden'
+          }`}
+        >
           {navLang.map((item, index) => (
             <Link
               onClick={() => scrollToSection(item.id)}
@@ -82,6 +93,13 @@ const Header = React.memo(() => {
               <Uk className="nav_links_button_icon" />
             )}
           </button>
+        </div>
+        <div className="nav_mobile" onClick={handleMobileBar}>
+          {!mobileButton ? (
+            <FontAwesomeIcon icon={faBars} className="nav_mobile_icon" />
+          ) : (
+            <FontAwesomeIcon icon={faXmark} className="nav_mobile_icon" />
+          )}
         </div>
         <button
           onClick={() => scrollToSection('header')}

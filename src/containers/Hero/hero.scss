@@ -5,9 +5,7 @@
   min-height: 90vh;
   height: auto;
   position: relative;
-  @media (max-width: 575.98px) {
-    min-height: 88vh;
-  }
+
   @media (max-height: 700px) {
     padding: 20px 0 20px 0;
   }

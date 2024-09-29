@@ -4,9 +4,6 @@ header {
   height: 10vh;
   background-color: var(--background);
   width: 100%;
-  @media (max-width: 575.98px) {
-    height: 12vh;
-  }
 }
 .nav {
   @include flex(row, space-between);
@@ -18,8 +15,6 @@ header {
   background-color: var(--background);
   border-bottom: 3px solid var(--tertiary);
   @media (max-width: 575.98px) {
-    @include flex(column);
-    height: 12vh;
     padding: 20px;
   }
   @media (min-width: 1440px) and (max-width: 1660px) {
@@ -33,7 +28,7 @@ header {
   }
   &_title {
     font-size: 1rem;
-    @media (max-width: 825px) {
+    @media (min-width: 575.98px) and (max-width: 825px) {
       display: none;
     }
     &_highlight {
@@ -41,30 +36,42 @@ header {
       font-weight: 700;
     }
   }
+  &_linksActive {
+    @media (max-width: 575.98px) {
+      transform: translateX(0);
+      transition: 400ms linear;
+    }
+  }
+  &_linksHidden {
+    @media (max-width: 575.98px) {
+      transform: translateX(300px);
+      transition: 400ms linear;
+    }
+  }
   &_links {
     @include flex;
     gap: 50px;
     font-size: 1rem;
     @media (max-width: 575.98px) {
-      @include flex(row, space-between);
-      width: 100%;
-      gap: 0px;
+      @include flex(column);
+      gap: 40px;
       font-size: 0.9rem;
+      position: absolute;
+      height: 100vh;
+      background-color: var(--secondary);
+      width: 40%;
+      top: 0;
+      right: 0;
     }
     @media (max-width: 411px) {
-      @include flex(row, space-between);
-      width: 100%;
-      gap: 0px;
       font-size: 0.7rem;
     }
-    @media (max-width: 650px) {
+    @media (min-width: 576px) and (max-width: 825px) {
       @include flex(row, space-between);
       gap: 20px;
-    }
-    @media (max-width: 825px) {
-      @include flex(row, space-between);
       width: 100%;
     }
+
     &_section {
       z-index: 1;
       position: relative;
@@ -121,6 +128,14 @@ header {
           height: 18px;
         }
       }
+    }
+  }
+  &_mobile {
+    @media (max-width: 575.98px) {
+      z-index: 20;
+    }
+    @media (min-width: 576px) {
+      display: none;
     }
   }
   .back {
