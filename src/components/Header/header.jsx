@@ -5,7 +5,7 @@ import { ReactComponent as France } from '../../assets/icons/france.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons'
 import { ReactComponent as Uk } from '../../assets/icons/uk.svg'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { scrollToSection } from '../../utils/function'
 import { useDispatch, useSelector } from 'react-redux'
 import { setLang } from '../../store/slice'
@@ -13,12 +13,13 @@ import { navLang } from '../../utils/data'
 
 const Header = React.memo(() => {
   const dispatch = useDispatch()
+  const navRef = useRef(null)
   const lang = useSelector((state) => state.switchLang.lang)
   const [visible, setVisible] = useState(false)
-  const [loaderActive, setLoaderActive] = useState(false)
-  const [loaderVisible, setLoaderVisible] = useState(false)
-  const [completedAnimations, setCompletedAnimations] = useState(0)
   const [mobileButton, setMobileButton] = useState(false)
+  // const [completedAnimations, setCompletedAnimations] = useState(0)
+  // const [loaderActive, setLoaderActive] = useState(false)
+  // const [loaderVisible, setLoaderVisible] = useState(false)
 
   // Permet d'afficher le bouton à 200px de scroll en dessous la section Hero et permet aussi d'attribuer
   useEffect(() => {
@@ -39,30 +40,47 @@ const Header = React.memo(() => {
     }
   }, [])
 
-  const handleLangChange = () => {
-    setLoaderVisible(true)
-    setLoaderActive(true)
-
-    // setTimeout(() => {
-    dispatch(setLang({ lang: !lang }))
-    setLoaderActive(false)
-    // }, 1000)
+  // fonction pour fermer le menu
+  const handleClickOutside = (event) => {
+    if (navRef.current && navRef.current.contains(event.target)) {
+      setMobileButton(false)
+    }
   }
+  useEffect(() => {
+    if (mobileButton) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
 
-  const handleAnimationEnd = () => {
-    setCompletedAnimations((prev) => prev + 1)
-  }
+    // Nettoyage du listener quand le menu se ferme
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [mobileButton])
 
   const handleMobileBar = () => {
     setMobileButton(!mobileButton)
   }
 
-  useEffect(() => {
-    if (completedAnimations === 10) {
-      setLoaderVisible(false)
-      setCompletedAnimations(0)
-    }
-  }, [completedAnimations])
+  const handleLangChange = () => {
+    // setLoaderVisible(true)
+    // setLoaderActive(true)
+
+    // setTimeout(() => {
+    dispatch(setLang({ lang: !lang }))
+    // setLoaderActive(false)
+    // }, 1000)
+  }
+
+  // const handleAnimationEnd = () => {
+  //   setCompletedAnimations((prev) => prev + 1)
+  // }
+
+  // useEffect(() => {
+  //   if (completedAnimations === 10) {
+  //     setLoaderVisible(false)
+  //     setCompletedAnimations(0)
+  //   }
+  // }, [completedAnimations])
 
   return (
     <header id="header">
@@ -108,7 +126,7 @@ const Header = React.memo(() => {
           <span className="sr-only">Nav button</span>
           <ArrowUp className="arrow" />
         </button>
-        {mobileButton && <div className="navModal"></div>}
+        {mobileButton && <div ref={navRef} className="overlay"></div>}
       </nav>
 
       {/* Masquer le loader si loaderVisible est faux

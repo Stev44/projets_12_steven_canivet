@@ -55,17 +55,23 @@ header {
     @media (max-width: 575.98px) {
       @include flex(column);
       gap: 40px;
-      font-size: 0.9rem;
+      font-size: 1.2rem;
       position: absolute;
       z-index: 30;
       height: 100vh;
-      background-color: var(--secondary);
-      width: 40%;
+      background: linear-gradient(
+        180deg,
+        rgba(11, 16, 24, 1) 0%,
+        rgba(25, 72, 133, 1) 35%,
+        rgba(62, 139, 239, 1) 100%
+      );
+      box-shadow: -4px 1px 12px -7px #000000;
+      width: 50%;
       top: 0;
       right: 0;
     }
     @media (max-width: 411px) {
-      font-size: 0.7rem;
+      font-size: 1rem;
     }
     @media (min-width: 576px) and (max-width: 825px) {
       @include flex(row, space-between);
@@ -151,8 +157,8 @@ header {
           transform: scale(0.9);
         }
         @media (max-width: 575.98px) {
-          width: 18px;
-          height: 18px;
+          width: 32px;
+          height: 32px;
         }
       }
     }
@@ -203,7 +209,7 @@ header {
   }
 }
 
-.navModal {
+.overlay {
   position: absolute;
   transition: 400ms;
   z-index: 15;
