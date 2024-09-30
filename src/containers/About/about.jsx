@@ -9,7 +9,6 @@ import { sectionLang } from '../../utils/data'
 
 const About = () => {
   const lang = useSelector((state) => state.switchLang.lang)
-  console.log(lang)
 
   return (
     <section className="aboutSection padding" id="about">
