@@ -19,12 +19,9 @@ export const projects = [
   {
     title: 'Léo Vautrin Coaching',
     img: leo,
-    descriptionFr: `Réalisation d'un site vitrine "from scratch", pour un coach sportif.`,
+    descriptionFr: `Réalisation d'un site vitrine, pour un coach sportif.`,
     descriptionEn: 'Creation of a showcase site for a sports coach.',
     technologies: [ReactIcon, Sass],
-    site: 'https://stev44.github.io/leo_vautrin_coaching/',
-    siteTextEn: 'View site',
-    siteTextFr: 'Voir le site',
   },
   {
     title: 'Portfolio',
