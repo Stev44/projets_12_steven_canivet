@@ -88,6 +88,13 @@ header {
         position: absolute;
         transition: all 0.3s ease;
         background: linear-gradient(180deg, transparent 50%, var(--accent) 50%);
+        @media (max-width: 575.98px) {
+          background: linear-gradient(
+            180deg,
+            transparent 50%,
+            var(--primary) 50%
+          );
+        }
       }
       &:hover::before {
         height: 80%;
@@ -128,6 +135,13 @@ header {
             transparent 50%,
             var(--accent) 50%
           );
+          @media (max-width: 575.98px) {
+            background: linear-gradient(
+              180deg,
+              transparent 50%,
+              var(--primary) 50%
+            );
+          }
         }
         &:hover::before {
           height: 80%;
