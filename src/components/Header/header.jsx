@@ -70,6 +70,10 @@ const Header = React.memo(() => {
     setMobileButton(!mobileButton)
   }
 
+  const closeMobileBar = () => {
+    setMobileButton(false)
+  }
+
   const handleLangChange = () => {
     // setLoaderVisible(true)
     // setLoaderActive(true)
@@ -107,14 +111,23 @@ const Header = React.memo(() => {
           {navLang.map((item, index) => (
             <Link
               to={`/#${item.id}`}
-              onClick={() => scrollToSection(item.id)}
+              onClick={() => {
+                scrollToSection(item.id)
+                closeMobileBar()
+              }}
               className={item.class}
               key={index}
             >
               {!lang ? item.nameFr : item.nameEn}
             </Link>
           ))}
-          <button className="nav_links_button" onClick={handleLangChange}>
+          <button
+            className="nav_links_button"
+            onClick={() => {
+              handleLangChange()
+              closeMobileBar()
+            }}
+          >
             {!lang ? (
               <France className="nav_links_button_icon" />
             ) : (
