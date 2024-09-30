@@ -1,8 +1,8 @@
 @import '../../style/main.scss';
 
 .contactSection {
-  @include flex(column, flex-start);
-  height: auto;
+  @include flex(column);
+  height: 100vh;
   width: 100%;
   @media (min-width: 0px) and (max-width: 850px) {
     height: auto;

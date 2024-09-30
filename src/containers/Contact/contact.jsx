@@ -239,12 +239,6 @@ const Contact = () => {
             </div>
           )}
         </div>
-        <div className="thanks_wrapper margin">
-          <h3 className="thanks_wrapper_title">
-            {!lang ? contactLang.thanksFr : contactLang.thanksEn}
-          </h3>
-          {!lang ? contactLang.cvFr : contactLang.cvEn}
-        </div>
       </div>
     </section>
   )
