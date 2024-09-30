@@ -106,6 +106,7 @@ const Header = React.memo(() => {
         >
           {navLang.map((item, index) => (
             <Link
+              to={`/#${item.id}`}
               onClick={() => scrollToSection(item.id)}
               className={item.class}
               key={index}
