@@ -23,6 +23,15 @@ const Header = React.memo(() => {
 
   // Permet d'afficher le bouton à 200px de scroll en dessous la section Hero et permet aussi d'attribuer
   useEffect(() => {
+    if (!lang) {
+      document.documentElement.lang = 'fr'
+    } else {
+      document.documentElement.lang = 'en'
+    }
+    // Change l'attribut lang sur changement de langue
+  }, [lang])
+
+  useEffect(() => {
     const handleScroll = () => {
       const scrollVisible = 200
 
