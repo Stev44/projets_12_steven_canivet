@@ -179,19 +179,21 @@ const Projects = () => {
                 </button>
               )}
             </div>
-            <div className="radio_buttons">
-              {images.map((_, index) => (
-                <label key={index}>
-                  <input
-                    type="radio"
-                    name="slide"
-                    value={index}
-                    checked={currentIndex === index}
-                    onChange={() => handleRadioChange(index)}
-                  />
-                </label>
-              ))}
-            </div>
+            {images.length != 1 && (
+              <div className="radio_buttons">
+                {images.map((_, index) => (
+                  <label key={index}>
+                    <input
+                      type="radio"
+                      name="slide"
+                      value={index}
+                      checked={currentIndex === index}
+                      onChange={() => handleRadioChange(index)}
+                    />
+                  </label>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}
