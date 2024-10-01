@@ -8,12 +8,20 @@ import { ReactComponent as Css } from '../assets/tech/css.svg'
 import { ReactComponent as Js } from '../assets/tech/js.svg'
 import { ReactComponent as Github } from '../assets/tech/github.svg'
 
-import project from '../assets/images/724.png'
-import ab from '../assets/images/argentbank2.jpeg'
+import project from '../assets/images/724.webp'
+import ab from '../assets/images/argentbank.webp'
 import portfolio from '../assets/images/portfolio.webp'
-import kasa from '../assets/images/kasa2.jpg'
+import kasa from '../assets/images/kasa.webp'
 import leo from '../assets/images/planche.webp'
-import nina from '../assets/images/nina2.jpg'
+import nina from '../assets/images/nina.webp'
+import previewCoach from '../assets/images/previewCoach.webp'
+import previewBank from '../assets/images/previewBank.webp'
+import previewBank2 from '../assets/images/previewBank2.webp'
+import previewBank3 from '../assets/images/previewBank3.webp'
+import previewEvent from '../assets/images/previewEvent.webp'
+import previewEvent2 from '../assets/images/previewEvent2.webp'
+import previewEvent3 from '../assets/images/previewEvent3.webp'
+import previewEvent4 from '../assets/images/previewEvent4.webp'
 
 export const projects = [
   {
@@ -22,6 +30,9 @@ export const projects = [
     descriptionFr: `Réalisation d'un site vitrine, pour un coach sportif.`,
     descriptionEn: 'Creation of a showcase site for a sports coach.',
     technologies: [ReactIcon, Sass],
+    images: [previewCoach],
+    previewFr: 'Aperçu',
+    previewEn: 'Preview',
   },
   {
     title: 'Portfolio',
@@ -44,6 +55,9 @@ export const projects = [
     code: 'https://github.com/Stev44/projet_11_steven_canivet',
     codeTextEn: 'View code',
     codeTextFr: 'Voir le code',
+    images: [previewBank, previewBank2, previewBank3],
+    previewFr: 'Aperçu',
+    previewEn: 'Preview',
   },
   {
     title: 'Kasa',
@@ -80,6 +94,9 @@ export const projects = [
     code: 'https://github.com/Stev44/projet_10_steven_canivet',
     codeTextEn: 'View code',
     codeTextFr: 'Voir le code',
+    images: [previewEvent, previewEvent2, previewEvent3, previewEvent4],
+    previewFr: 'Aperçu',
+    previewEn: 'Preview',
   },
 ]
 
