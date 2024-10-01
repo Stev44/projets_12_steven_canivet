@@ -12,6 +12,8 @@ const Projects = () => {
   const [isModalOpened, setIsModalOpened] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [images, setImages] = useState([]) // État pour les images
+  const [touchStart, setTouchStart] = useState(0) // Pour stocker la position de départ du swipe
+  const [touchEnd, setTouchEnd] = useState(0)
 
   const handlePreview = (imgArray, index) => {
     setImages(imgArray) // Définit le tableau d'images à afficher
@@ -46,6 +48,30 @@ const Projects = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     )
+  }
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 50) {
+      // Swipe vers la gauche -> Next slide
+      nextSlide()
+    }
+
+    if (touchStart - touchEnd < -50) {
+      // Swipe vers la droite -> Previous slide
+      prevSlide()
+    }
+  }
+
+  const handleRadioChange = (index) => {
+    setCurrentIndex(index)
   }
 
   return (
@@ -116,29 +142,56 @@ const Projects = () => {
       </div>
       {isModalOpened && (
         <div className="modal">
-          <div className="modal_preview" ref={navRef}>
-            {images.length != 1 && (
-              <button className="modal_preview_button" onClick={prevSlide}>
-                <FontAwesomeIcon
-                  icon={faAngleLeft}
-                  className="modal_preview_button_icon"
-                />
-              </button>
-            )}
+          <div
+            className="modal_preview"
+            ref={navRef}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div className="modal_preview_container">
+              {images.length != 1 && (
+                <button
+                  className="modal_preview_container_button left"
+                  onClick={prevSlide}
+                >
+                  <FontAwesomeIcon
+                    icon={faAngleLeft}
+                    className="modal_preview_container_button_icon"
+                  />
+                </button>
+              )}
 
-            <img
-              src={images[currentIndex]}
-              alt={`Slide ${currentIndex + 1}`}
-              className="modal_preview_image"
-            />
-            {images.length != 1 && (
-              <button className="modal_preview_button" onClick={nextSlide}>
-                <FontAwesomeIcon
-                  icon={faAngleRight}
-                  className="modal_preview_button_icon"
-                />
-              </button>
-            )}
+              <img
+                src={images[currentIndex]}
+                alt={`Slide ${currentIndex + 1}`}
+                className="modal_preview_container_image"
+              />
+              {images.length != 1 && (
+                <button
+                  className="modal_preview_container_button right"
+                  onClick={nextSlide}
+                >
+                  <FontAwesomeIcon
+                    icon={faAngleRight}
+                    className="modal_preview_container_button_icon"
+                  />
+                </button>
+              )}
+            </div>
+            <div className="radio_buttons">
+              {images.map((_, index) => (
+                <label key={index}>
+                  <input
+                    type="radio"
+                    name="slide"
+                    value={index}
+                    checked={currentIndex === index}
+                    onChange={() => handleRadioChange(index)}
+                  />
+                </label>
+              ))}
+            </div>
           </div>
         </div>
       )}

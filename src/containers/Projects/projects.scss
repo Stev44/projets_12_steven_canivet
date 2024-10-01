@@ -156,14 +156,15 @@
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     &_preview {
-      @include flex;
+      @include flex(column);
+      gap: 40px;
       position: absolute;
       z-index: 100;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       margin: auto;
-      width: 700px;
+      width: 800px;
       height: auto;
       @media (max-width: 1200px) {
         width: 600px;
@@ -174,44 +175,42 @@
       @media (max-width: 860px) {
         width: 400px;
       }
-      @media (max-width: 500px) {
-        width: 350px;
+      @media (max-width: 550px) {
+        width: 100%;
       }
-      @media (max-width: 400px) {
-        width: 300px;
-      }
-      @media (max-width: 350px) {
-        width: 85%;
-      }
-      &_button {
+      &_container {
         @include flex;
-        background-color: transparent;
-        padding: 50px;
-        border: none;
+        &_button {
+          @include flex;
+          background-color: transparent;
+          padding: 50px;
+          border: none;
 
-        width: 2.5%;
-        animation: scale 0.4s ease;
-        @media (max-width: 550px) {
-          padding: 30px;
-        }
-        @media (max-width: 450px) {
-          padding: 15px;
-        }
-        &_icon {
-          color: var(--background);
-          width: 40px;
-          height: 40px;
-          @media (max-width: 400px) {
-            width: 24px;
-            height: 24px;
+          width: 2.5%;
+          animation: scale 0.4s ease;
+          @media (max-width: 550px) {
+            display: none;
+            padding: 0px;
+          }
+          @media (max-width: 450px) {
+            padding: 15px;
+          }
+          &_icon {
+            color: var(--background);
+            width: 40px;
+            height: 40px;
+            @media (max-width: 400px) {
+              width: 24px;
+              height: 24px;
+            }
           }
         }
-      }
-      &_image {
-        width: 95%;
-        height: 100%;
-        object-fit: cover;
-        animation: scale 0.4s ease;
+        &_image {
+          width: 95%;
+          height: 100%;
+          object-fit: contain;
+          animation: scale 0.4s ease;
+        }
       }
     }
   }
