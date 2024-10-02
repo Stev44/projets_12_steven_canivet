@@ -128,6 +128,7 @@ const Header = React.memo(() => {
               closeMobileBar()
             }}
           >
+            <span className="sr-only">Lang button</span>
             {!lang ? (
               <France className="nav_links_button_icon" />
             ) : (

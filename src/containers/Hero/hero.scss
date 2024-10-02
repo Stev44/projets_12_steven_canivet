@@ -71,7 +71,8 @@
         &_button {
           @include flex(row, flex-start);
           gap: 20px;
-          button {
+          &_contact,
+          &_cv {
             width: 180px;
             padding: 15px 10px 15px 10px;
             border-radius: 10px;

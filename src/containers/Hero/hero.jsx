@@ -38,11 +38,9 @@ const Hero = () => {
                   {!lang ? heroLang.contactButtonFr : heroLang.contactButtonEn}
                 </span>
               </button>
-              <button className="wrapper_button_cv">
-                <a href="cv.txt" download="cv.txt">
-                  {!lang ? heroLang.cvButtonFr : heroLang.cvButtonEn}
-                </a>
-              </button>
+              <a href="cv.txt" download="cv.txt" className="wrapper_button_cv">
+                {!lang ? heroLang.cvButtonFr : heroLang.cvButtonEn}
+              </a>
             </div>
           </div>
           <div className="profile">
