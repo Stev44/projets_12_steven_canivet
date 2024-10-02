@@ -1,18 +1,23 @@
-import Hero from '../../containers/Hero/hero'
-import Projects from '../../containers/Projects/projects'
-import About from '../../containers/About/about'
-import Skills from '../../containers/Skills/skills'
-import Contact from '../../containers/Contact/contact'
+import React, { Suspense, lazy } from 'react'
+import Hero from '../../containers/Hero/hero' // Chargement normal
 import './home.scss'
+
+// Chargement paresseux des autres composants
+const Projects = lazy(() => import('../../containers/Projects/projects'))
+const About = lazy(() => import('../../containers/About/about'))
+const Skills = lazy(() => import('../../containers/Skills/skills'))
+const Contact = lazy(() => import('../../containers/Contact/contact'))
 
 const Home = () => {
   return (
     <main>
-      <Hero />
-      <Projects />
-      <About />
-      <Skills />
-      <Contact />
+      <Hero /> {/* Chargé immédiatement */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <Projects />
+        <About />
+        <Skills />
+        <Contact />
+      </Suspense>
     </main>
   )
 }

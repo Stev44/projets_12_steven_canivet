@@ -11,21 +11,23 @@ const Projects = () => {
   const lang = useSelector((state) => state.switchLang.lang)
   const [isModalOpened, setIsModalOpened] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [images, setImages] = useState([]) // État pour les images
-  const [touchStart, setTouchStart] = useState(0) // Pour stocker la position de départ du swipe
+  const [images, setImages] = useState([])
+  const [touchStart, setTouchStart] = useState(0)
   const [touchEnd, setTouchEnd] = useState(0)
+  const [enterAnimation, setEnterAnimation] = useState('')
+  const [exitAnimation, setExitAnimation] = useState('')
 
   const handlePreview = (imgArray, index) => {
-    setImages(imgArray) // Définit le tableau d'images à afficher
-    setCurrentIndex(index) // Définit l'index courant pour le slider
-    setIsModalOpened(true) // Ouvre la modal
+    setImages(imgArray)
+    setCurrentIndex(index)
+    setIsModalOpened(true)
   }
 
   const handleClickOutside = (event) => {
     if (navRef.current && !navRef.current.contains(event.target)) {
       setIsModalOpened(false)
-      setCurrentIndex(0) // Reset l'index à 0 quand la modal se ferme
-      setImages([]) // Réinitialise le tableau d'images
+      setCurrentIndex(0)
+      setImages([])
     }
   }
 
@@ -39,15 +41,27 @@ const Projects = () => {
   }, [isModalOpened])
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    )
+    setExitAnimation('slide-out-right')
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      )
+      setExitAnimation('')
+      setEnterAnimation('slide-in-left')
+    }, 300)
+    setTimeout(() => setEnterAnimation(''), 600)
   }
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    )
+    setExitAnimation('slide-out-left')
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      )
+      setExitAnimation('')
+      setEnterAnimation('slide-in-right')
+    }, 300)
+    setTimeout(() => setEnterAnimation(''), 600)
   }
 
   const handleTouchStart = (e) => {
@@ -60,12 +74,10 @@ const Projects = () => {
 
   const handleTouchEnd = () => {
     if (touchStart - touchEnd > 50) {
-      // Swipe vers la gauche -> Next slide
       nextSlide()
     }
 
     if (touchStart - touchEnd < -50) {
-      // Swipe vers la droite -> Previous slide
       prevSlide()
     }
   }
@@ -86,7 +98,7 @@ const Projects = () => {
               <div className="card">
                 <div className="card_img">
                   <div className="img">
-                    <img src={item.img} alt={item.title} />
+                    <img src={item.img} alt={item.title} loading="lazy" />
                     <span className="img_title">{item.title}</span>
                   </div>
                   <div className="container">
@@ -165,7 +177,8 @@ const Projects = () => {
               <img
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex + 1}`}
-                className="modal_preview_container_image"
+                className={`modal_preview_container_image ${enterAnimation} ${exitAnimation}`}
+                loading="lazy"
               />
               {images.length !== 1 && (
                 <button
@@ -182,7 +195,10 @@ const Projects = () => {
             {images.length !== 1 && (
               <div className="radio_buttons">
                 {images.map((_, index) => (
-                  <label key={index}>
+                  <label
+                    key={index}
+                    className={currentIndex === index ? 'active' : ''}
+                  >
                     <input
                       type="radio"
                       name="slide"

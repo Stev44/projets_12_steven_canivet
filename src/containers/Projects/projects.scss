@@ -201,7 +201,6 @@
           background-color: transparent;
           padding: 50px;
           border: none;
-
           width: 2.5%;
           animation: scale 0.4s ease;
           @media (max-width: 550px) {
@@ -212,7 +211,7 @@
             padding: 15px;
           }
           &_icon {
-            color: var(--background);
+            color: var(--text);
             width: 40px;
             height: 40px;
             @media (max-width: 400px) {
@@ -224,8 +223,10 @@
         &_image {
           width: 95%;
           height: 100%;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
+            0 2px 5px rgba(0, 0, 0, 0.15);
           object-fit: contain;
-          animation: scale 0.4s ease;
         }
       }
     }
@@ -261,5 +262,96 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+.radio_buttons {
+  @include flex;
+  gap: 5px;
+
+  label {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--text);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  label.active {
+    background-color: var(--text);
+    width: 20px;
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.modal_preview_container_image {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  &.slide-in-right {
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideInRight 0.3s forwards;
+  }
+
+  &.slide-in-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideInLeft 0.3s forwards;
+  }
+
+  &.slide-out-left {
+    animation: slideOutLeft 0.3s forwards;
+  }
+
+  &.slide-out-right {
+    animation: slideOutRight 0.3s forwards;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
   }
 }
