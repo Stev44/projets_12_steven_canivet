@@ -29,12 +29,24 @@ const Hero = () => {
             <div className="socials">
               <Socials hero="socials_icon" />
             </div>
-            <button
-              className="wrapper_button"
-              onClick={() => scrollToSection('contact')}
-            >
-              <span>{!lang ? heroLang.buttonFr : heroLang.buttonEn}</span>
-            </button>
+            <div className="wrapper_button">
+              <button
+                className="wrapper_button_contact"
+                onClick={() => scrollToSection('contact')}
+              >
+                <span>
+                  {!lang ? heroLang.contactButtonFr : heroLang.contactButtonEn}
+                </span>
+              </button>
+              <button
+                className="wrapper_button_cv"
+                onClick={() => scrollToSection('contact')}
+              >
+                <a href="cv.txt" download="cv.txt">
+                  {!lang ? heroLang.cvButtonFr : heroLang.cvButtonEn}
+                </a>
+              </button>
+            </div>
           </div>
           <div className="profile">
             <img src={profile} alt="Steven Canivet" className="profile_img" />

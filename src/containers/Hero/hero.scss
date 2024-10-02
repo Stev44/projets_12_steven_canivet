@@ -69,21 +69,57 @@
           }
         }
         &_button {
-          width: 250px;
-          border: 2px solid var(--accent);
-          background-color: var(--accent);
-          padding: 20px;
-          border-radius: 15px;
-          transition: 0.4s;
-          @media (max-width: 575.98px) {
-            width: 60%;
-            padding: 15px;
+          @include flex(row, flex-start);
+          gap: 20px;
+          button {
+            width: 180px;
+            padding: 15px 10px 15px 10px;
+            border-radius: 10px;
             font-size: 1rem;
-          }
-          &:hover {
-            color: var(--text);
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
             box-shadow: 0 3px 15px rgba(62, 139, 239, 0.3);
-            transform: scale(0.9);
+            &:hover {
+              color: var(--text);
+              transform: scale(0.95);
+            }
+            &:hover::before {
+              width: 100%;
+            }
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 0%;
+              transition: 0.4s;
+              z-index: -1;
+            }
+            @media (max-width: 575.98px) {
+              width: 120px;
+              font-size: 0.7rem;
+            }
+          }
+          &_contact {
+            border: 2px solid var(--accent);
+            background-color: var(--accent);
+            &::before {
+              background-color: var(--background);
+            }
+          }
+          &_cv {
+            border: 2px solid var(--accent);
+            background-color: var(--background);
+            color: var(--text);
+            &::before {
+              background-color: var(--accent);
+            }
+          }
+          @media (max-width: 575.98px) {
+            @include flex(row, center);
           }
         }
       }
@@ -164,4 +200,13 @@
   color: var(--accent);
   background-color: white;
   transform: scale(0.9);
+}
+
+@keyframes translate {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }

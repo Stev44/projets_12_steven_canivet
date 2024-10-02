@@ -194,12 +194,15 @@
           }
         }
         .button {
+          position: relative;
+          overflow: hidden;
+          border: 2px solid var(--accent);
           height: 60px;
-          width: 200px;
-          border-radius: 15px;
-          border: none;
+          width: 175px;
+          border-radius: 10px;
           background-color: var(--accent);
           transition: 0.4s;
+          box-shadow: 0 3px 15px rgba(62, 139, 239, 0.3);
           @media (max-width: 575.98px) {
             height: 40px;
             width: 120px;
@@ -214,11 +217,26 @@
             }
           }
           &:hover {
-            transform: scale(0.9);
+            transform: scale(0.95);
             box-shadow: 0 3px 15px rgba(62, 139, 239, 0.3);
             .button_icon {
               color: var(--text);
+              transform: scale(0.95);
             }
+          }
+          &:hover::before {
+            width: 100%;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+            transition: 0.4s;
+            z-index: -1;
+            background-color: var(--background);
           }
         }
       }

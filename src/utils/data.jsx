@@ -90,10 +90,12 @@ export const navLang = [
 export const heroLang = {
   strongEn: 'Front-end developer',
   descriptionEn: 'Passionate by creation',
-  buttonEn: 'Contact me',
+  contactButtonEn: 'Contact me',
+  cvButtonEn: 'Download CV',
   strongFr: 'Développeur front-end',
   descriptionFr: 'Passionné par la création',
-  buttonFr: 'Me contacter',
+  contactButtonFr: 'Me contacter',
+  cvButtonFr: 'Téléchargez CV',
 }
 
 export const sectionLang = {

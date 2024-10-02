@@ -150,7 +150,7 @@ const Projects = () => {
             onTouchEnd={handleTouchEnd}
           >
             <div className="modal_preview_container">
-              {images.length != 1 && (
+              {images.length !== 1 && (
                 <button
                   className="modal_preview_container_button left"
                   onClick={prevSlide}
@@ -167,7 +167,7 @@ const Projects = () => {
                 alt={`Slide ${currentIndex + 1}`}
                 className="modal_preview_container_image"
               />
-              {images.length != 1 && (
+              {images.length !== 1 && (
                 <button
                   className="modal_preview_container_button right"
                   onClick={nextSlide}
@@ -179,7 +179,7 @@ const Projects = () => {
                 </button>
               )}
             </div>
-            {images.length != 1 && (
+            {images.length !== 1 && (
               <div className="radio_buttons">
                 {images.map((_, index) => (
                   <label key={index}>

@@ -101,50 +101,42 @@ header {
       }
     }
     &_contact {
-      padding: 10px 15px 10px 15px;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid var(--accent);
+      padding: 7px 15px 7px 15px;
       background-color: var(--accent);
       border-radius: 10px;
       color: black;
       transition: 0.4s;
+      box-shadow: 0 3px 15px rgba(62, 139, 239, 0.3);
       &:hover {
-        transform: scale(0.9);
+        transform: scale(0.95);
         color: var(--text);
       }
+      &:hover::before {
+        width: 100%;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        transition: 0.4s;
+        z-index: -1;
+        background-color: var(--background);
+      }
       @media (max-width: 575.98px) {
-        padding: 0px;
-        border-radius: 0px;
-        background-color: transparent;
+        border-color: var(--primary);
+        background-color: var(--secondary);
         color: var(--text);
-        z-index: 1;
-        position: relative;
-        @include flex(column, flex-end);
         &:hover {
-          transform: none;
+          color: var(--background);
         }
         &::before {
-          content: '';
-          height: 0%;
-          width: 100%;
-          display: block;
-          z-index: -1;
-          opacity: 70%;
-          position: absolute;
-          transition: all 0.3s ease;
-          background: linear-gradient(
-            180deg,
-            transparent 50%,
-            var(--accent) 50%
-          );
-          @media (max-width: 575.98px) {
-            background: linear-gradient(
-              180deg,
-              transparent 50%,
-              var(--primary) 50%
-            );
-          }
-        }
-        &:hover::before {
-          height: 80%;
+          background-color: var(--primary);
         }
       }
     }
