@@ -34,9 +34,14 @@ const Projects = () => {
   useEffect(() => {
     if (isModalOpened) {
       document.addEventListener('mousedown', handleClickOutside)
+      document.body.style.overflow = 'hidden' // Désactive le défilement
+    } else {
+      document.body.style.overflow = 'unset' // Réactive le défilement
     }
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
+      document.body.style.overflow = 'unset'
     }
   }, [isModalOpened])
 
@@ -48,8 +53,8 @@ const Projects = () => {
       )
       setExitAnimation('')
       setEnterAnimation('slide-in-left')
-    }, 300)
-    setTimeout(() => setEnterAnimation(''), 600)
+    }, 100)
+    setEnterAnimation('')
   }
 
   const nextSlide = () => {
@@ -60,8 +65,8 @@ const Projects = () => {
       )
       setExitAnimation('')
       setEnterAnimation('slide-in-right')
-    }, 300)
-    setTimeout(() => setEnterAnimation(''), 600)
+    }, 100)
+    setEnterAnimation('')
   }
 
   const handleTouchStart = (e) => {

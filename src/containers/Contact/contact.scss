@@ -296,3 +296,9 @@ textarea:focus {
   border-color: var(--accent);
   outline: none;
 }
+
+.confirm {
+  &_text {
+    color: rgb(86, 206, 86);
+  }
+}

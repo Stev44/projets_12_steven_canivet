@@ -234,8 +234,8 @@ const Contact = () => {
             </button>
           </form>
           {confirmVisible && (
-            <div>
-              <p>{confirm}</p>
+            <div className="confirm">
+              <p className="confirm_text">{confirm}</p>
             </div>
           )}
         </div>

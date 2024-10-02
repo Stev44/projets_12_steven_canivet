@@ -58,11 +58,15 @@ const Header = React.memo(() => {
   useEffect(() => {
     if (mobileButton) {
       document.addEventListener('mousedown', handleClickOutside)
+      document.body.style.overflow = 'hidden' // Désactive le défilement
+    } else {
+      document.body.style.overflow = 'unset' // Réactive le défilement
     }
 
     // Nettoyage du listener quand le menu se ferme
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
+      document.body.style.overflow = 'unset'
     }
   }, [mobileButton])
 
