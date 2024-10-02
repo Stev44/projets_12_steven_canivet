@@ -95,7 +95,7 @@ export const heroLang = {
   strongFr: 'Développeur front-end',
   descriptionFr: 'Passionné par la création',
   contactButtonFr: 'Me contacter',
-  cvButtonFr: 'Téléchargez CV',
+  cvButtonFr: 'Télécharger CV',
 }
 
 export const sectionLang = {
