@@ -38,10 +38,7 @@ const Hero = () => {
                   {!lang ? heroLang.contactButtonFr : heroLang.contactButtonEn}
                 </span>
               </button>
-              <button
-                className="wrapper_button_cv"
-                onClick={() => scrollToSection('contact')}
-              >
+              <button className="wrapper_button_cv">
                 <a href="cv.txt" download="cv.txt">
                   {!lang ? heroLang.cvButtonFr : heroLang.cvButtonEn}
                 </a>
