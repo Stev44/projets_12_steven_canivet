@@ -28,7 +28,7 @@ const Skills = () => {
                   <span
                     className={`skills_container_info_category ${item.color}`}
                   >
-                    {item.category}
+                    {!lang ? item.categoryFr : item.categoryEn}
                   </span>
                   <div>
                     {Array.isArray(item.favorite) &&
