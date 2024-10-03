@@ -7,6 +7,7 @@ import { ReactComponent as Figma } from '../assets/tech/figma.svg'
 import { ReactComponent as Css } from '../assets/tech/css.svg'
 import { ReactComponent as Js } from '../assets/tech/js.svg'
 import { ReactComponent as Github } from '../assets/tech/github.svg'
+import { ReactComponent as Stars } from '../assets/icons/stars.svg'
 
 import project from '../assets/images/724.webp'
 import ab from '../assets/images/argentbank.webp'
@@ -104,33 +105,55 @@ export const tech = [
   {
     icon: ReactIcon,
     name: 'React',
+    category: 'Développement',
+    color: 'blue',
+    animate: 'reactAnimated',
+    favorite: [Stars],
   },
   {
     icon: Redux,
     name: 'Redux',
+    category: 'Développement',
+    color: 'blue',
+    animate: 'reduxAnimated',
+    favorite: [Stars],
   },
   {
     icon: Js,
     name: 'Javascript',
+    category: 'Développement',
+    color: 'blue',
   },
   {
     icon: Sass,
     name: 'Sass',
+    category: 'Intégration',
+    color: 'green',
+    favorite: [Stars],
+    animate: 'sassAnimated',
   },
   {
     icon: Css,
     name: 'CSS',
+    category: 'Intégration',
+    color: 'green',
   },
   {
     icon: Html,
     name: 'HTML',
+    category: 'Intégration',
+    color: 'green',
   },
   {
     icon: Figma,
     name: 'Figma',
+    category: 'Web design',
+    color: 'purple',
   },
   {
     icon: Github,
     name: 'Github',
+    category: 'Outil collaboratif',
+    color: 'orange',
   },
 ]

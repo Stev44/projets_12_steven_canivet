@@ -24,35 +24,137 @@
         justify-content: center;
         row-gap: 80px;
         column-gap: 5%;
-        @media (min-width: 750px) and (max-width: 1024px) {
+        @media (min-width: 921px) and (max-width: 1471px) {
           grid-template-columns: repeat(3, 1fr);
         }
-        @media (max-width: 750px) {
+        @media (max-width: 920px) {
           grid-template-columns: repeat(2, 1fr);
           row-gap: 30px;
         }
         &_container {
-          @include flex(column);
-          gap: 25px;
+          @include flex(column, center);
+          gap: 40px;
           background-color: hsl(214, 68%, 31%, 20%);
-          width: 200px;
-          height: 200px;
+          width: 250px;
+          height: 250px;
           border-radius: 15px;
+          position: relative;
           border: 1px solid hsl(214, 68%, 31%, 20%);
-          @media (max-width: 578.98px) {
+          transition: 0.4s;
+          &:hover {
+            background-color: hsl(214, 68%, 31%, 70%);
+          }
+          @media (max-width: 575.98px) {
+            width: 200px;
+            height: 200px;
+            gap: 30px;
+          }
+          @media (max-width: 450px) {
             width: 150px;
             height: 150px;
+            gap: 20px;
           }
-          &_icon {
-            width: 56px;
-            height: 56px;
-            @media (max-width: 575.98px) {
-              width: 36px;
-              height: 36px;
+          &_stars {
+            width: 38px;
+            height: 38px;
+            fill: #b89d5d;
+            position: absolute;
+            top: -5px;
+            right: 0px;
+            @media (max-width: 450px) {
+              width: 32px;
+              height: 32px;
+            }
+          }
+          &_tech {
+            @include flex(column);
+            gap: 10px;
+            &_icon {
+              width: 56px;
+              height: 56px;
+              @media (max-width: 575.98px) {
+                width: 36px;
+                height: 36px;
+              }
+            }
+            .reactAnimated {
+              animation: spin 10s linear infinite;
+            }
+            .sassAnimated {
+              animation: rotate 5s ease-in-out infinite;
+            }
+            .reduxAnimated {
+              animation: grow 1s ease-in-out infinite;
+            }
+          }
+
+          &_info {
+            width: 100%;
+            height: 12%;
+            @include flex(row);
+            &_favorite,
+            &_category {
+              width: auto;
+              height: 100%;
+              border-radius: 20px;
+              padding: 10px;
+              font-size: 0.7rem;
+              @include flex;
+              @media (max-width: 450px) {
+                font-size: 0.6rem;
+              }
+            }
+            &_favorite {
+              background-color: #b89d5d;
+            }
+            .blue {
+              background-color: var(--accent);
+            }
+            .green {
+              background-color: #c937b0;
+            }
+            .purple {
+              background-color: #6d547d;
+            }
+            .orange {
+              background-color: #d28c45;
             }
           }
         }
       }
     }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
   }
 }

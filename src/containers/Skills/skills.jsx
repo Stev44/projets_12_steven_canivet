@@ -15,8 +15,28 @@ const Skills = () => {
           <div className="skills">
             {tech.map((item, index) => (
               <div className="skills_container" key={index}>
-                <item.icon key={index} className="skills_container_icon" />
-                <div className="skills_container_name">{item.name}</div>
+                <div className="skills_container_tech">
+                  <item.icon
+                    key={index}
+                    className={`skills_container_tech_icon ${
+                      item.animate && item.animate
+                    }`}
+                  />
+                  <div className="skills_container_tech_name">{item.name}</div>
+                </div>
+                <div className="skills_container_info">
+                  <span
+                    className={`skills_container_info_category ${item.color}`}
+                  >
+                    {item.category}
+                  </span>
+                  <div>
+                    {Array.isArray(item.favorite) &&
+                      item.favorite.map((Stars, index) => (
+                        <Stars key={index} className="skills_container_stars" />
+                      ))}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
