@@ -4,7 +4,11 @@ import { useSelector } from 'react-redux'
 import { sectionLang } from '../../utils/data'
 import { useEffect, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import {
+  faAngleRight,
+  faAngleLeft,
+  faXmark,
+} from '@fortawesome/free-solid-svg-icons'
 
 const Projects = () => {
   const navRef = useRef(null)
@@ -196,6 +200,11 @@ const Projects = () => {
                   />
                 </button>
               )}
+              <FontAwesomeIcon
+                icon={faXmark}
+                className="modal_preview_container_close"
+                onClick={() => setIsModalOpened(false)}
+              />
             </div>
             {images.length !== 1 && (
               <div className="radio_buttons">

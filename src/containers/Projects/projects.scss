@@ -196,6 +196,7 @@
       }
       &_container {
         @include flex;
+        position: relative;
         &_button {
           @include flex;
           background-color: transparent;
@@ -227,6 +228,15 @@
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
             0 2px 5px rgba(0, 0, 0, 0.15);
           object-fit: contain;
+        }
+        &_close {
+          position: absolute;
+          top: -60px;
+          right: 15px;
+          height: 30px;
+          width: 30px;
+          cursor: pointer;
+          color: var(--text);
         }
       }
     }
