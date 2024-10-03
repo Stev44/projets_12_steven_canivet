@@ -86,6 +86,10 @@
             .reduxAnimated {
               animation: grow 1s ease-in-out infinite;
             }
+            &_name {
+              font-size: 1rem;
+              font-weight: normal;
+            }
           }
 
           &_info {
@@ -104,20 +108,46 @@
                 font-size: 0.6rem;
               }
             }
+            &_category {
+              position: relative;
+              z-index: 1;
+              &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: -1;
+                border-radius: 20px;
+                width: 100%;
+                height: 100%;
+              }
+            }
             &_favorite {
               background-color: #b89d5d;
             }
             .blue {
-              background-color: var(--accent);
+              background-color: transparent;
+              &::before {
+                background-color: #3e8beffd;
+              }
             }
             .green {
-              background-color: #c937b0;
+              background-color: transparent;
+              &::before {
+                background-color: #c937b0fd;
+              }
             }
             .purple {
-              background-color: #6d547d;
+              background-color: transparent;
+              &::before {
+                background-color: #6d547dfd;
+              }
             }
             .orange {
-              background-color: #d28c45;
+              background-color: transparent;
+              &::before {
+                background-color: #d28c45fd;
+              }
             }
           }
         }

@@ -22,7 +22,7 @@ const Skills = () => {
                       item.animate && item.animate
                     }`}
                   />
-                  <div className="skills_container_tech_name">{item.name}</div>
+                  <h3 className="skills_container_tech_name">{item.name}</h3>
                 </div>
                 <div className="skills_container_info">
                   <span

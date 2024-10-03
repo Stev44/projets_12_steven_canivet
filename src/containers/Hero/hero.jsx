@@ -24,12 +24,12 @@ const Hero = () => {
           <div className="container">
             <div className="wrapper">
               <h1 className="wrapper_title">Steven</h1>
-              <p className="wrapper_job">
+              <h2 className="wrapper_job">
                 <strong>{!lang ? heroLang.strongFr : heroLang.strongEn}</strong>
-              </p>
-              <p className="wrapper_description lang">
+              </h2>
+              <h3 className="wrapper_description lang">
                 {!lang ? heroLang.descriptionFr : heroLang.descriptionEn}
-              </p>
+              </h3>
               <div className="socials">
                 <MemoizedSocials hero="socials_icon" />
               </div>

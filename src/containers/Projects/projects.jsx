@@ -107,7 +107,7 @@ const Projects = () => {
               <div className="card">
                 <div className="card_img">
                   <div className="img">
-                    <img src={item.img} alt={item.title} loading="lazy" />
+                    <img src={item.img} alt={item.altSection} loading="lazy" />
                     <span className="img_title">{item.title}</span>
                   </div>
                   <div className="container">
@@ -176,6 +176,7 @@ const Projects = () => {
                   className="modal_preview_container_button left"
                   onClick={prevSlide}
                 >
+                  <span className="sr-only">Prev Button</span>
                   <FontAwesomeIcon
                     icon={faAngleLeft}
                     className="modal_preview_container_button_icon"
@@ -194,6 +195,7 @@ const Projects = () => {
                   className="modal_preview_container_button right"
                   onClick={nextSlide}
                 >
+                  <span className="sr-only">Next Button</span>
                   <FontAwesomeIcon
                     icon={faAngleRight}
                     className="modal_preview_container_button_icon"
@@ -220,6 +222,7 @@ const Projects = () => {
                       checked={currentIndex === index}
                       onChange={() => handleRadioChange(index)}
                     />
+                    <span className="sr-only">Image {index + 1}</span>
                   </label>
                 ))}
               </div>

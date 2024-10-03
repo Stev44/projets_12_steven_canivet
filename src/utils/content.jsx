@@ -28,6 +28,7 @@ export const projects = [
   {
     title: 'Léo Vautrin Coaching',
     img: leo,
+    altSection: 'Un coach sportif et son client',
     descriptionFr: `Réalisation d'un site vitrine, pour un coach sportif.`,
     descriptionEn: 'Creation of a showcase site for a sports coach.',
     technologies: [ReactIcon, Sass],
@@ -38,6 +39,7 @@ export const projects = [
   {
     title: 'Portfolio',
     img: portfolio,
+    altSection: 'Portfolio de Steven Canivet',
     descriptionFr: `Projet de fin d'étude réalisé "from scratch", en react et redux.`,
     descriptionEn:
       'End-of-study project created from scratch, in react and redux.',
@@ -49,6 +51,7 @@ export const projects = [
   {
     title: 'Argent Bank',
     img: ab,
+    altSection: 'Plante dans un vase transparent rempli de pièce de monnaie',
     descriptionFr: `Réalisation d'un système d'authentification et des routes API pour les transactions.`,
     descriptionEn:
       'Creation of an authentication system and API routes for transactions.',
@@ -63,6 +66,7 @@ export const projects = [
   {
     title: 'Kasa',
     img: kasa,
+    altSection: 'Appartement meublé',
     descriptionFr: `Réalisation d'un site de location immobilière.`,
     descriptionEn: 'Development of a property rental website.',
     technologies: [ReactIcon, Sass],
@@ -76,6 +80,7 @@ export const projects = [
   {
     title: 'Nina Carducci',
     img: nina,
+    altSection: 'Chanteur devant la scène',
     descriptionFr: `Amélioration du référencement naturel (SEO) d'un site de photographe.`,
     descriptionEn: `Improving the natural referencing (SEO) of a photographer's website.`,
     technologies: [Js, Html, Css],
@@ -89,6 +94,7 @@ export const projects = [
   {
     title: '724 events',
     img: project,
+    altSection: `Homme prenant la parole pendant une conférence `,
     descriptionFr: `Analyse et débogage d'un site d'évènementiel.`,
     descriptionEn: 'Analysis and debugging of an events site',
     technologies: [ReactIcon],

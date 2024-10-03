@@ -70,6 +70,9 @@
           background-color: var(--secondary_v2);
           border-radius: 10px;
           border: 1px solid var(--secondary_v2);
+          &:hover {
+            background-color: hsl(214, 68%, 31%, 50%);
+          }
           &_text {
             font-size: 0.75rem;
             @media (min-width: 480px) and (max-width: 575.98px) {
