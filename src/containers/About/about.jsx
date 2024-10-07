@@ -3,6 +3,7 @@ import { ReactComponent as Pro } from '../../assets/icons/bag.svg'
 import { ReactComponent as Gear } from '../../assets/icons/gear.svg'
 import { ReactComponent as Hand } from '../../assets/icons/hand.svg'
 import { ReactComponent as Book } from '../../assets/icons/book.svg'
+import AboutMe from '../../assets/images/about.jpg'
 import { aboutDataLang, qualityLang } from '../../utils/data'
 import { useSelector } from 'react-redux'
 import { sectionLang } from '../../utils/data'
@@ -56,7 +57,13 @@ const About = () => {
               {!lang ? aboutDataLang.textFr : aboutDataLang.textEn}
             </div>
           </div>
-          <div className="line"></div>
+          <div className="line">
+            <img
+              src={AboutMe}
+              alt="Homme entrain de programmer"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>

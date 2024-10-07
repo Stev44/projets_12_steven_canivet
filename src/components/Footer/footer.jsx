@@ -12,7 +12,8 @@ const Footer = () => {
       </div>
 
       <p>
-        © Steven Canivet | {!lang ? footerLang.rightsFr : footerLang.rightsEn}
+        © 2024 Steven Canivet |{' '}
+        {!lang ? footerLang.rightsFr : footerLang.rightsEn}
       </p>
     </footer>
   )

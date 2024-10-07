@@ -160,6 +160,7 @@ const Contact = () => {
                     }
                     value={formState.lastName}
                     onChange={handleChange}
+                    autoComplete="on"
                     required
                   />
                 </div>
@@ -177,6 +178,7 @@ const Contact = () => {
                     }
                     value={formState.firstName}
                     onChange={handleChange}
+                    autoComplete="on"
                     required
                   />
                 </div>
@@ -209,6 +211,7 @@ const Contact = () => {
                     placeholder="Email"
                     value={formState.email}
                     onChange={handleChange}
+                    autoComplete="on"
                     required
                   />
                 </div>

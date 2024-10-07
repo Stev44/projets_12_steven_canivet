@@ -5,7 +5,7 @@ import { ReactComponent as ArrowDown } from '../../assets/icons/arrowDown.svg'
 import ParticlesComponent from '../../components/Particles/particles'
 import smallProfile from '../../assets/images/smallProfile.webp'
 import largeProfile from '../../assets/images/largeProfile.webp'
-import mediumProfile from '../../assets/images/profile-400.webp'
+import mediumProfile from '../../assets/images/mediumProfile.webp'
 import { scrollToSection } from '../../utils/function'
 import { heroLang } from '../../utils/data'
 import './hero.scss'
@@ -66,8 +66,13 @@ const Hero = () => {
                   {!lang ? heroLang.contactButtonFr : heroLang.contactButtonEn}
                 </span>
               </button>
-              <a href="cv.txt" download="cv.txt" className="wrapper_button_cv">
+              <a
+                href="CV Steven Canivet.pdf"
+                download="CV Steven Canivet.pdf"
+                className="wrapper_button_cv"
+              >
                 {!lang ? heroLang.cvButtonFr : heroLang.cvButtonEn}
+                <span className="sr-only">Télécharger le CV (PDF)</span>
               </a>
             </div>
           </div>
@@ -77,6 +82,8 @@ const Hero = () => {
               srcSet={`${mediumProfile} 600w, ${largeProfile} 1200w`}
               alt="Steven Canivet"
               className="profile_img"
+              width="500"
+              height="500"
             />
           </div>
         </div>

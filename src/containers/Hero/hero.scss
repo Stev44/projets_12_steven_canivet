@@ -38,7 +38,7 @@
           }
         }
         &_title {
-          background: linear-gradient(120deg, var(--primary), var(--accent));
+          background: linear-gradient(120deg, var(--accent), var(--primary));
           font-size: 8rem;
           background-clip: text;
           -webkit-background-clip: text;
@@ -86,7 +86,6 @@
             box-shadow: 0 3px 15px rgba(62, 139, 239, 0.3);
             &:hover {
               color: var(--text);
-              transform: scale(0.95);
             }
             &:hover::before {
               width: 100%;
@@ -134,6 +133,8 @@
           height: 500px;
           border-radius: 50%;
           object-fit: cover;
+          border: 2px solid var(--secondary);
+          box-shadow: 0 0 25px var(--secondary);
           @media (max-width: 575.98px) {
             width: 225px;
             height: 225px;

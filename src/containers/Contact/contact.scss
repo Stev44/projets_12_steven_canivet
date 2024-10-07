@@ -196,6 +196,7 @@
         .button {
           position: relative;
           overflow: hidden;
+          z-index: 1;
           border: 2px solid var(--accent);
           height: 60px;
           width: 175px;
@@ -217,11 +218,9 @@
             }
           }
           &:hover {
-            transform: scale(0.95);
             box-shadow: 0 3px 15px rgba(62, 139, 239, 0.3);
             .button_icon {
               color: var(--text);
-              transform: scale(0.95);
             }
           }
           &:hover::before {
