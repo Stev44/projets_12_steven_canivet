@@ -8,8 +8,8 @@ export const aboutDataLang = {
       <p>
         My career path is unconventional and reflects my versatility. After
         completing a BTS in International Trade and a Bachelor's degree in
-        Communication and Marketing, I worked for a year as a hospital porter at
-        the Hôpital Privé du Confluent, driven by my interest in helping others.
+        Communication and Marketing, I worked for a year as a hospital porter,
+        driven by my interest in helping others.
       </p>
       <p>
         Driven by a passion for creation, I decided to transition into web
@@ -33,8 +33,8 @@ export const aboutDataLang = {
       <p>
         Mon parcours est atypique et témoigne de ma polyvalence. Après un BTS en
         commerce international et une licence en communication et marketing,
-        j’ai occupé pendant un an le poste de brancardier à l’Hôpital Privé du
-        Confluent, poussé par mon intérêt pour l’aide à la personne.
+        j’ai occupé pendant un an le poste de brancardier, poussé par mon
+        intérêt pour l’aide à la personne.
       </p>
       <p>
         Animé par une passion pour la création, j’ai décidé de me reconvertir

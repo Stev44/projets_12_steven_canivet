@@ -105,7 +105,7 @@ const Contact = () => {
     }
   }
   const navigateToProfile = () => {
-    window.open('https://www.linkedin.com/', '_blank')
+    window.open('https://www.linkedin.com/in/steven-canivet', '_blank')
   }
 
   return (

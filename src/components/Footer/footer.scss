@@ -15,6 +15,12 @@ footer {
     align-items: center;
     gap: 50px;
   }
+  &_text {
+    font-size: 1rem;
+    @media (max-width: 575.98px) {
+      font-size: 0.8rem;
+    }
+  }
 }
 .footer_icon > :first-child {
   width: 24px;

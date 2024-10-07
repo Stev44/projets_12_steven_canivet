@@ -11,7 +11,7 @@ const Footer = () => {
         <Socials footer="footer_icon" />
       </div>
 
-      <p>
+      <p className="footer_text">
         © 2024 Steven Canivet |{' '}
         {!lang ? footerLang.rightsFr : footerLang.rightsEn}
       </p>
