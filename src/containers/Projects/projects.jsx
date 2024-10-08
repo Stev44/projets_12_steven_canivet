@@ -121,37 +121,21 @@ const Projects = () => {
                     </div>
                     <div className="card_img_button">
                       {item.code && (
-                        <button>
-                          <p>
-                            <a
-                              href={item.code}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              {!lang ? item.codeTextFr : item.codeTextEn}
-                            </a>
-                          </p>
-                        </button>
+                        <a href={item.code} target="_blank" rel="noreferrer">
+                          <p>{!lang ? item.codeTextFr : item.codeTextEn}</p>
+                        </a>
                       )}
                       {item.site && (
-                        <button>
-                          <p>
-                            <a
-                              href={item.site}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              {!lang ? item.siteTextFr : item.siteTextEn}
-                            </a>
-                          </p>
-                        </button>
+                        <a href={item.site} target="_blank" rel="noreferrer">
+                          <p>{!lang ? item.siteTextFr : item.siteTextEn}</p>
+                        </a>
                       )}
                       {item.images && (
-                        <button onClick={() => handlePreview(item.images, 0)}>
+                        <a onClick={() => handlePreview(item.images, 0)}>
                           <p className="preview">
                             {!lang ? item.previewFr : item.previewEn}
                           </p>
-                        </button>
+                        </a>
                       )}
                     </div>
                   </div>
