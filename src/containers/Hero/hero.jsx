@@ -67,8 +67,12 @@ const Hero = () => {
                 </span>
               </button>
               <a
-                href="CV Steven Canivet.pdf"
-                download="CV Steven Canivet.pdf"
+                href={
+                  !lang ? 'cv_steven_canivet.pdf' : 'cv_steven_canivet_en.pdf'
+                }
+                download={
+                  !lang ? 'cv_steven_canivet.pdf' : 'cv_steven_canivet_en.pdf'
+                }
                 className="wrapper_button_cv"
               >
                 {!lang ? heroLang.cvButtonFr : heroLang.cvButtonEn}
