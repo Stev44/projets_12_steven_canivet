@@ -14,6 +14,7 @@ const Projects = () => {
   const navRef = useRef(null)
   const lang = useSelector((state) => state.switchLang.lang)
   const [isModalOpened, setIsModalOpened] = useState(false)
+  const [isClosing, setIsClosing] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [images, setImages] = useState([])
   const [touchStart, setTouchStart] = useState(0)
@@ -29,10 +30,22 @@ const Projects = () => {
 
   const handleClickOutside = (event) => {
     if (navRef.current && !navRef.current.contains(event.target)) {
-      setIsModalOpened(false)
-      setCurrentIndex(0)
-      setImages([])
+      setIsClosing(true)
+      setTimeout(() => {
+        setIsModalOpened(false)
+        setIsClosing(false)
+        setCurrentIndex(0)
+        setImages([])
+      }, 400)
     }
+  }
+
+  const handleCloseModal = () => {
+    setIsClosing(true)
+    setTimeout(() => {
+      setIsModalOpened(false)
+      setIsClosing(false)
+    }, 300)
   }
 
   useEffect(() => {
@@ -57,7 +70,7 @@ const Projects = () => {
       )
       setExitAnimation('')
       setEnterAnimation('slide-in-left')
-    }, 100)
+    }, 300)
     setEnterAnimation('')
   }
 
@@ -69,10 +82,11 @@ const Projects = () => {
       )
       setExitAnimation('')
       setEnterAnimation('slide-in-right')
-    }, 100)
+    }, 300)
     setEnterAnimation('')
   }
 
+  /* swipe for phone */
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX)
   }
@@ -131,11 +145,11 @@ const Projects = () => {
                         </a>
                       )}
                       {item.images && (
-                        <a onClick={() => handlePreview(item.images, 0)}>
+                        <button onClick={() => handlePreview(item.images, 0)}>
                           <p className="preview">
                             {!lang ? item.previewFr : item.previewEn}
                           </p>
-                        </a>
+                        </button>
                       )}
                     </div>
                   </div>
@@ -146,7 +160,7 @@ const Projects = () => {
         </div>
       </div>
       {isModalOpened && (
-        <div className="modal">
+        <div className={`modal ${isClosing && 'modalClose'}`}>
           <div
             className="modal_preview"
             ref={navRef}
@@ -189,7 +203,7 @@ const Projects = () => {
               <FontAwesomeIcon
                 icon={faXmark}
                 className="modal_preview_container_close"
-                onClick={() => setIsModalOpened(false)}
+                onClick={handleCloseModal}
               />
             </div>
             {images.length !== 1 && (
