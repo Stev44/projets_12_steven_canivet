@@ -15,6 +15,9 @@ header {
   background-color: var(--background);
   border-bottom: 3px solid var(--tertiary);
   animation: translateY 0.8s ease-in-out;
+  @media (min-width: 0px) and (max-width: 1000px) {
+    animation: none;
+  }
   @media (max-width: 575.98px) {
     padding: 20px;
   }
