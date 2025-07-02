@@ -5,9 +5,12 @@
   min-height: 90vh;
   height: auto;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   @media (max-height: 700px) {
     padding: 20px 0 20px 0;
+  }
+  @media (max-height: 1000px) {
+    overflow-y: hidden;
   }
   &_wrapper {
     @include flex(column);
@@ -229,8 +232,8 @@
 
 @keyframes translateLeft {
   from {
-    opacity: 0;
-    transform: translateX(-100%);
+    opacity: 0.1;
+    transform: translateX(-80%);
   }
   to {
     opacity: 1;
@@ -240,7 +243,7 @@
 
 @keyframes translateBottom {
   from {
-    opacity: 0;
+    opacity: 0.1;
     transform: translateY(90%);
   }
   to {
@@ -251,7 +254,7 @@
 
 @keyframes translateTop {
   from {
-    opacity: 0;
+    opacity: 0.1;
     transform: translateY(-100%);
   }
   to {
@@ -262,8 +265,8 @@
 
 @keyframes translateRight {
   from {
-    opacity: 0;
-    transform: translateX(140%);
+    opacity: 0.1;
+    transform: translateX(100%);
   }
   to {
     opacity: 1;

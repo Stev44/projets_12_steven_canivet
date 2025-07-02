@@ -68,10 +68,10 @@ const Hero = () => {
               </button>
               <a
                 href={
-                  !lang ? 'cv_steven_canivet.pdf' : 'cv_steven_canivet_en.pdf'
+                  !lang ? 'cv_steven_canivet1.pdf' : 'cv_steven_canivet1.pdf'
                 }
                 download={
-                  !lang ? 'cv_steven_canivet.pdf' : 'cv_steven_canivet_en.pdf'
+                  !lang ? 'cv_steven_canivet1.pdf' : 'cv_steven_canivet1.pdf'
                 }
                 className="wrapper_button_cv"
               >
